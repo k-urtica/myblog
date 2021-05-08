@@ -106,5 +106,19 @@ module.exports = {
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: SITE_TITLE,
+        short_name: SITE_TITLE,
+        description: DESCRIPTION,
+        start_url: `/`,
+        background_color: `#fafafa`,
+        theme_color: `#1e3a8a`,
+        display: `standalone`,
+        lang: `ja`,
+        icon: `src/images/icon.png`,
+      },
+    },
   ],
 };
