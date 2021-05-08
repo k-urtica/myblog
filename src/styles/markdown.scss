@@ -1,0 +1,255 @@
+/*! purgecss start ignore */
+.markdown-body {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+    line-height: 1.25;
+    padding-bottom: 0.3rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+    border-bottom: solid 1px #718096;
+  }
+
+  h3 {
+    font-size: 24px;
+    border-bottom: solid 1px #ccc;
+  }
+
+  h4 {
+    font-size: 21px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 16px;
+  }
+
+  hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+  }
+
+  a {
+    background-color: transparent;
+    color: #2563eb;
+    &:hover {
+      color: #1e40af;
+    }
+  }
+  // 外部リンクかつカード型リンク以外に適用
+  a[target='_blank']:not([class~='preview-notion-container']) {
+    padding-right: 0.375em;
+    &:after {
+      content: '';
+      display: inline-block;
+      position: relative;
+      top: 0.18em;
+      left: 0.2em;
+      width: 0.95em;
+      height: 0.95em;
+      -webkit-mask-image: url('../images/open-in-new.svg');
+      mask-image: url('../images/open-in-new.svg');
+      mask-size: 0.95em 0.95em;
+      background-color: #718096;
+    }
+  }
+
+  blockquote {
+    border-left: 0.25em solid #a0aec0;
+    padding: 0 0 0 1rem;
+    margin: 0 0.5rem;
+    p,
+    li {
+      color: #718096;
+      font-size: 0.95rem;
+    }
+  }
+
+  blockquote,
+  dl,
+  ol,
+  p,
+  pre,
+  table,
+  ul {
+    margin-top: 1.5rem;
+    margin-bottom: 1.8rem;
+    line-height: 1.75rem;
+  }
+
+  table {
+    display: block;
+    overflow: auto;
+    width: 100%;
+    td,
+    th {
+      border: 1px solid #dfe2e5;
+      padding: 6px 13px;
+    }
+    tr {
+      background-color: #fff;
+      border-top: 1px solid #c6cbd1;
+    }
+    tr:nth-child(2n) {
+      background-color: #f6f8fa;
+    }
+  }
+
+  ol,
+  ul {
+    padding-left: 2em;
+  }
+  ul {
+    li {
+      margin-top: 0.25em;
+      list-style-type: disc;
+    }
+  }
+  ol {
+    li {
+      margin-top: 0.25em;
+      list-style-type: decimal;
+    }
+  }
+
+  // インラインコード
+  .language-text {
+    background-color: rgba(40, 42, 54, 0.9) !important;
+    padding: 0.15em 0.4em;
+    border-radius: 6px;
+    margin: 0 0.2em;
+  }
+
+  // コードブロックタイトル
+  .gatsby-code-title {
+    position: relative;
+    padding-bottom: 0.5em;
+    background-color: rgb(40, 42, 54) !important;
+    top: 25px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    overflow: hidden;
+    span {
+      font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New,
+        monospace !important;
+      color: #e5e7eb;
+      font-size: 0.85em;
+      background-color: rgba(89, 104, 131, 0.4);
+      border-bottom-right-radius: 6px;
+      padding: 0.4em 0.5em;
+    }
+  }
+
+  // コードブロック
+  .gatsby-highlight {
+    padding: 0.5em 0;
+    font-size: 0.9em;
+
+    pre {
+      margin: 0.5em 0;
+      padding: 1em;
+
+      line-height: 1.65em;
+      border-radius: 6px;
+      background-color: rgb(40, 42, 54) !important;
+      box-shadow: rgba(0, 0, 0, 0.55) 0px 6px 10px;
+      font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New,
+        monospace !important;
+      code {
+        font-family: inherit;
+      }
+    }
+
+    // 行ハイライト
+    .gatsby-highlight-code-line {
+      background-color: rgba(52, 211, 153, 0.2);
+      display: block;
+      margin-right: -1em;
+      margin-left: -16px;
+      padding-right: 1em;
+      padding-left: 10px;
+      border-left: 6px solid rgb(8, 216, 243);
+    }
+  }
+
+  // リンクカード
+  .preview-notion-container {
+    display: flex;
+    padding: 0.95rem 0.75rem;
+    margin: 1rem 0;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    .preview-notion-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-right: 0.8rem;
+
+      .preview-notion-title {
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+      }
+      .preview-notion-description {
+        font-size: 0.78rem;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        margin-bottom: 0.4rem;
+      }
+      .preview-notion-url {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+
+        .preview-notion-favicon {
+          height: 0.95rem;
+          margin-right: 0.5rem;
+        }
+        .preview-notion-link {
+          color: #6b7280;
+          font-size: 0.7rem;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          overflow: hidden;
+        }
+      }
+    }
+    .preview-notion-image-wrapper {
+      display: flex;
+      align-items: center;
+      img {
+        max-height: 120px;
+      }
+    }
+
+    transition-duration: 300ms;
+    &:hover {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      background-color: #f5f3ff;
+    }
+  }
+}
+/*! purgecss end ignore */
