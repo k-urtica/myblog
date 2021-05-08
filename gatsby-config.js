@@ -94,9 +94,6 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-typegen`,
-      options: {
-        fileName: `types/graphql-types.d.ts`,
-      },
     },
     `gatsby-plugin-sass`,
     `gatsby-plugin-emotion`,
