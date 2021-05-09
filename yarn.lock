@@ -7112,7 +7112,7 @@ gatsby-remark-images@^5.1.0:
 
 "gatsby-remark-link-card@https://github.com/k-urtica/gatsby-remark-link-card.git":
   version "0.0.0-development"
-  resolved "https://github.com/k-urtica/gatsby-remark-link-card.git#ad0ff2f0973fedd13d164561aa2193d274f27399"
+  resolved "https://github.com/k-urtica/gatsby-remark-link-card.git#9f9750223d6f4a823d7fe30492aa53af919bec66"
   dependencies:
     puppeteer "^9.1.1"
     unist-util-visit "^2.0.0"
