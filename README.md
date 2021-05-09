@@ -8,6 +8,14 @@ My personal blog made with Gatsby!
 
 [https://knote.dev/](https://knote.dev/)
 
+## 📄 License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.<br />
+Copyright © 2021 [K](https://github.com/k-urtica/myblog).
+
+Tanugo-Round-Regular font is [SIL Open Font License Version 1.1](https://opensource.org/licenses/OFL-1.1) licensed.<br />
+Copyright © [たぬき侍](https://tanukifont.com/).
+
 ## 👀 Author
 
 👤 **K**
