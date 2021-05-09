@@ -54,7 +54,7 @@
   }
   // 外部リンクかつカード型リンク以外に適用
   a[target='_blank']:not([class~='preview-notion-container']) {
-    padding-right: 0.375em;
+    padding-right: 0.45em;
     &:after {
       content: '';
       display: inline-block;
@@ -66,7 +66,7 @@
       -webkit-mask-image: url('../images/open-in-new.svg');
       mask-image: url('../images/open-in-new.svg');
       mask-size: 0.95em 0.95em;
-      background-color: #718096;
+      background-color: #9ca3af;
     }
   }
 
@@ -163,7 +163,7 @@
 
     pre {
       margin: 0.5em 0;
-      padding: 1em;
+      padding: 1.2em;
 
       line-height: 1.65em;
       border-radius: 6px;
