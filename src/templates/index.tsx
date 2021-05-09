@@ -3,12 +3,17 @@ import * as React from 'react';
 import 'twin.macro';
 
 import HeroHeader from '../components/HeroHeader';
+import PageNation from '../components/PageNation';
 import PostCardWrapper from '../components/PostCardWrapper';
 import SEO from '../components/Seo';
 import Wrapper from '../components/Wrapper';
 import Layout from '../layouts/Layout';
 
-const Home: React.FC<PageProps<GatsbyTypes.AllPostsQuery>> = ({ data }) => {
+const IndexPage: React.FC<
+  PageProps<GatsbyTypes.AllPostsQuery, PageContext>
+> = ({ data, pageContext }) => {
+  const { nextPagePath, previousPagePath } = pageContext;
+
   return (
     <>
       <SEO titleTemplate={data.site?.siteMetadata?.title} />
@@ -18,17 +23,32 @@ const Home: React.FC<PageProps<GatsbyTypes.AllPostsQuery>> = ({ data }) => {
           <HeroHeader />
         </Wrapper>
 
-        <Wrapper tw="container mx-auto mb-28 px-4">
+        <Wrapper tw="container mx-auto mb-10 px-4">
           <PostCardWrapper allMarkdownRemark={data.allMarkdownRemark} />
+
+          <PageNation
+            nextPagePath={nextPagePath}
+            prevPagePath={previousPagePath}
+            tw="mt-14 py-4 text-center"
+          />
         </Wrapper>
       </Layout>
     </>
   );
 };
 
+type PageContext = {
+  nextPagePath: string;
+  previousPagePath: string;
+};
+
 export const query = graphql`
-  query AllPosts {
-    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+  query AllPosts($skip: Int!, $limit: Int!) {
+    allMarkdownRemark(
+      sort: { fields: frontmatter___date, order: DESC }
+      skip: $skip
+      limit: $limit
+    ) {
       edges {
         node {
           frontmatter {
@@ -57,4 +77,4 @@ export const query = graphql`
   }
 `;
 
-export default Home;
+export default IndexPage;

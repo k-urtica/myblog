@@ -1,4 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+
+const { paginate } = require('gatsby-awesome-pagination');
+
 const dayjs = require('dayjs');
 dayjs.extend(require('dayjs/plugin/utc'));
 const path = require('path');
@@ -88,6 +91,16 @@ exports.createPages = async ({ graphql, actions }) => {
         previous,
       },
     });
+  });
+
+  /** Create paginated pages */
+  paginate({
+    createPage,
+    items: posts,
+    itemsPerPage: 12,
+    itemsPerFirstPage: 12,
+    pathPrefix: ({ pageNumber }) => (pageNumber === 0 ? `/` : `/page`),
+    component: path.resolve(`./src/templates/index.tsx`),
   });
 
   const categories = results.data.categoryGroup.group;
