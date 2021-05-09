@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: [
-        'FlopDesignFONT',
+        'たぬゴ丸 標準',
         '-apple-system',
         'BlinkMacSystemFont',
         'Roboto',
