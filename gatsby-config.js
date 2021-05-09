@@ -124,6 +124,9 @@ module.exports = {
       resolve: `gatsby-plugin-robots-txt`,
     },
     {
+      resolve: `gatsby-plugin-sitemap`,
+    },
+    {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: ['G-W8WC213W4R'],
