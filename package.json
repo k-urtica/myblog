@@ -45,7 +45,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet-async": "^1.0.9",
-    "react-paginate": "^7.1.2",
     "react-particles-js": "^3.4.1",
     "sass": "^1.32.12",
     "twin.macro": "^2.4.1"
