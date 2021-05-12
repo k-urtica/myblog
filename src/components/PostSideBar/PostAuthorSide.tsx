@@ -15,11 +15,11 @@ const PostAuthorSide: React.FC = () => {
         <StaticImage
           src="../../images/avatar.png"
           alt="avatar"
-          width={110}
+          width={130}
           tw="rounded-full ring-2 ring-green-400 border-opacity-75 -mt-8 transform"
         />
       </div>
-      <div tw="text-center mb-4">
+      <div tw="text-center mb-3">
         <span tw="font-bold text-xl text-indigo-700">K</span>
       </div>
       <div tw="px-2 mb-2">
