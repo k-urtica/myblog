@@ -16,7 +16,7 @@ const PostAuthorSide: React.FC = () => {
           src="../../images/avatar.png"
           alt="avatar"
           width={110}
-          tw="rounded-full ring-2 ring-green-400 border-opacity-75 -mt-8"
+          tw="rounded-full ring-2 ring-green-400 border-opacity-75 -mt-8 transform"
         />
       </div>
       <div tw="text-center mb-4">

@@ -16,7 +16,7 @@ const PostAuthor: React.FC = () => {
           <StaticImage
             src="../../images/avatar.png"
             alt="avatar"
-            tw="rounded-full ring-2 ring-green-400 border-opacity-75 my-1 w-24 sm:w-28"
+            tw="rounded-full ring-2 ring-green-400 border-opacity-75 my-1 w-24 sm:w-28 transform"
           />
         </div>
 

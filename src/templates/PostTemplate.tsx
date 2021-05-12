@@ -42,7 +42,7 @@ const PostTemplate: React.FC<
                 <GatsbyImage
                   image={post.frontmatter.cover.childImageSharp.gatsbyImageData}
                   alt={post.frontmatter.title as string}
-                  tw="sm:rounded-2xl mb-0 sm:mb-10 max-h-lg"
+                  tw="sm:rounded-2xl mb-0 sm:mb-10 max-h-lg transform"
                 />
               )}
             </>
