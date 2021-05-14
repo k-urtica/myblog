@@ -11,6 +11,7 @@ import PostHeader from '../components/PostHeader/PostHeader';
 import PostAuthorSide from '../components/PostSideBar/PostAuthorSide';
 import PostToc from '../components/PostSideBar/PostToc';
 import SEO from '../components/Seo';
+import ShareLinks from '../components/ShareLinks';
 import Wrapper from '../components/Wrapper';
 import Layout from '../layouts/Layout';
 import '../styles/markdown.scss';
@@ -21,6 +22,12 @@ const PostTemplate: React.FC<
 > = ({ data, pageContext }) => {
   const post = data.markdownRemark;
   const { next, previous } = pageContext;
+
+  let pageUrl = '';
+  if (data.site?.siteMetadata?.siteUrl && post?.fields) {
+    pageUrl = ((data.site.siteMetadata.siteUrl as string) +
+      post.fields.postPath) as string;
+  }
 
   return (
     <>
@@ -75,6 +82,9 @@ const PostTemplate: React.FC<
 
               <PostFooter>
                 <PostAuthor />
+
+                <ShareLinks url={pageUrl} tw="text-center mt-4 py-3" />
+
                 <Wrapper tw="my-10 px-4 sm:px-0">
                   <PrevNextPost next={next} prev={previous} />
                 </Wrapper>
@@ -151,6 +161,11 @@ export const pageQuery = graphql`
       }
       fields {
         postPath
+      }
+    }
+    site {
+      siteMetadata {
+        siteUrl
       }
     }
   }
