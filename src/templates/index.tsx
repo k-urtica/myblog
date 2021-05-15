@@ -4,6 +4,7 @@ import 'twin.macro';
 
 import HeroHeader from '../components/HeroHeader';
 import PageNation from '../components/PageNation';
+import PageWrapper from '../components/PageWrapper';
 import PostCardWrapper from '../components/PostCardWrapper';
 import SEO from '../components/Seo';
 import Wrapper from '../components/Wrapper';
@@ -19,19 +20,21 @@ const IndexPage: React.FC<
       <SEO titleTemplate={data.site?.siteMetadata?.title} />
 
       <Layout>
-        <Wrapper tw="sm:mt-8 mb-10">
-          <HeroHeader />
-        </Wrapper>
+        <PageWrapper>
+          <Wrapper tw="sm:mt-8 mb-10">
+            <HeroHeader />
+          </Wrapper>
 
-        <Wrapper tw="container mx-auto mb-10 px-4">
-          <PostCardWrapper allMarkdownRemark={data.allMarkdownRemark} />
+          <Wrapper tw="px-4 sm:px-0 mb-10">
+            <PostCardWrapper allMarkdownRemark={data.allMarkdownRemark} />
 
-          <PageNation
-            nextPagePath={nextPagePath}
-            prevPagePath={previousPagePath}
-            tw="mt-14 py-4 text-center"
-          />
-        </Wrapper>
+            <PageNation
+              nextPagePath={nextPagePath}
+              prevPagePath={previousPagePath}
+              tw="mt-14 py-4 text-center"
+            />
+          </Wrapper>
+        </PageWrapper>
       </Layout>
     </>
   );

@@ -3,6 +3,7 @@ import 'twin.macro';
 import tw from 'twin.macro';
 
 import AppLink from '../components/AppLink';
+import PageWrapper from '../components/PageWrapper';
 import SEO from '../components/Seo';
 import Layout from '../layouts/Layout';
 
@@ -11,7 +12,7 @@ const AboutPage: React.FC = () => (
     <SEO title="プロフィール" />
 
     <Layout>
-      <MainWrapper>
+      <PageWrapper>
         <HeaderContainer>
           <div tw="text-center">
             <h1 tw="inline-block text-2xl font-bold border-b-2 border-gray-700 px-4 pb-2">
@@ -20,7 +21,7 @@ const AboutPage: React.FC = () => (
           </div>
         </HeaderContainer>
 
-        <div tw="px-5 py-6 bg-blue-900 bg-opacity-10 rounded-xl shadow-xl">
+        <div tw="px-5 py-6 bg-blue-900 bg-opacity-10 sm:rounded-xl shadow-xl">
           <Section>
             <SectionTitle>私について</SectionTitle>
             <SectionInner>
@@ -129,14 +130,10 @@ const AboutPage: React.FC = () => (
             </SectionInner>
           </Section>
         </div>
-      </MainWrapper>
+      </PageWrapper>
     </Layout>
   </>
 );
-
-const MainWrapper = tw.div`
-  container mx-auto px-3 md:px-10
-`;
 
 const HeaderContainer = tw.div`
   mt-10 pb-12
