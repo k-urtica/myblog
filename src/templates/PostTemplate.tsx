@@ -96,11 +96,11 @@ const PostTemplate: React.FC<
               </Section>
 
               <SideContainer>
-                <Wrapper css={tw`mb-6`}>
+                <Wrapper tw="mb-6">
                   <PostAuthorSide />
                 </Wrapper>
                 {post?.headings && (
-                  <Wrapper css={tw`sticky top-0.5`}>
+                  <Wrapper tw="sticky top-0.5">
                     <PostToc headings={post.headings} />
                   </Wrapper>
                 )}
