@@ -4,6 +4,7 @@ import * as React from 'react';
 import 'twin.macro';
 import tw from 'twin.macro';
 
+import Ads from '../components/Ads';
 import AppLink from '../components/AppLink';
 import PageWrapper from '../components/PageWrapper';
 import PostAuthor from '../components/PostFooter/PostAuthor';
@@ -88,6 +89,8 @@ const PostTemplate: React.FC<
                   <PostAuthor />
 
                   <ShareLinks url={pageUrl} tw="text-center mt-4 py-3" />
+
+                  <Ads tw="my-3" />
 
                   <Wrapper tw="my-10 px-4 sm:px-0">
                     <PrevNextPost next={next} prev={previous} />
