@@ -47,7 +47,7 @@ const PostHeader: React.FC<Props> = ({ frontMatter }) => {
 };
 
 const PostHeaderWrapper = tw.div`
-  px-3 py-4 sm:(px-6 rounded-2xl) bg-purple-200 bg-opacity-70
+  px-3 py-4 sm:(px-6 rounded-2xl) bg-alabaster bg-opacity-90
 `;
 
 const PostTitle = tw.h1`

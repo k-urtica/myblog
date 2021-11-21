@@ -81,7 +81,7 @@ const HeroHeader: React.FC = () => (
 );
 
 const HeroWrapper = tw.div`
-  container mx-auto bg-gradient-to-tr from-indigo-900 to-gray-900 h-60 sm:(rounded-2xl h-96) shadow-2xl
+  container mx-auto bg-indigo-900 bg-opacity-50 h-60 sm:(rounded-2xl h-96) shadow-2xl
 `;
 
 export default HeroHeader;

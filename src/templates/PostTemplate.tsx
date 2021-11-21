@@ -44,7 +44,7 @@ const PostTemplate: React.FC<
           <article>
             {post?.frontmatter && (
               <>
-                <Wrapper tw="mt-8 sm:mb-4">
+                <Wrapper tw="sm:(mt-8 mb-4)">
                   <PostHeader frontMatter={post.frontmatter} />
                 </Wrapper>
 

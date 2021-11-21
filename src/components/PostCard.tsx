@@ -59,7 +59,7 @@ type Props = {
 };
 
 const CardWrapper = tw.div`
-  flex flex-col h-full border bg-alabaster overflow-hidden shadow-lg hover:(shadow-2xl bg-yellow-50) duration-500 rounded-lg transform
+  flex flex-col h-full bg-alabaster overflow-hidden shadow-lg hover:(shadow-2xl bg-yellow-50) duration-500 rounded-lg transform bg-opacity-90
 `;
 
 const CardInnerWrapper = tw.div`
