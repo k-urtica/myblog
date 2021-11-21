@@ -1,4 +1,5 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/57b218b2-c7b1-4291-83ef-6ab1ab094b59/deploy-status)](https://app.netlify.com/sites/knote/deploys)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <h1 align="center">🐈 K note.dev 😄</h1>
 
