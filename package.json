@@ -48,8 +48,8 @@
     "react-adsense": "^0.1.0",
     "react-dom": "^17.0.2",
     "react-helmet-async": "^1.0.9",
-    "react-particles-js": "^3.4.1",
     "react-share": "^4.4.0",
+    "react-tsparticles": "^1.37.4",
     "sass": "^1.32.12",
     "twin.macro": "^2.4.1"
   },

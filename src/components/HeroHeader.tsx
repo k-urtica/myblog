@@ -1,13 +1,16 @@
 import * as React from 'react';
-import Particles from 'react-particles-js';
+import Particles from 'react-tsparticles';
 import tw from 'twin.macro';
 
 const HeroHeader: React.FC = () => (
   <HeroWrapper>
     <div tw="relative">
       <Particles
-        tw="h-60 sm:h-96 "
-        params={{
+        id="tsparticles"
+        tw="h-60 sm:h-96"
+        options={{
+          fullScreen: false,
+          autoPlay: true,
           particles: {
             number: {
               value: 50,
@@ -19,6 +22,7 @@ const HeroHeader: React.FC = () => (
               value: 20,
               random: true,
               anim: {
+                enable: true,
                 speed: 1,
                 size_min: 0.5,
               },
@@ -33,6 +37,7 @@ const HeroHeader: React.FC = () => (
               enable: false,
             },
             move: {
+              enable: true,
               random: true,
               speed: 1.5,
               direction: 'top',
@@ -63,6 +68,7 @@ const HeroHeader: React.FC = () => (
               },
             },
           },
+          detectRetina: true,
         }}
       />
       <div tw="absolute top-1/2 w-full text-center">
