@@ -3,15 +3,17 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: [
-        'たぬゴ丸 標準',
+      body: [
+        'ZenMaruGothic Medium',
         '-apple-system',
         'BlinkMacSystemFont',
         'Roboto',
+        'Arial',
+        'Noto Sans JP',
+        'ヒラギノ角ゴシック',
         'Yu Gothic Medium',
         '游ゴシック Medium',
         'メイリオ',
-        'Segoe UI',
         'sans-serif',
       ],
     },
