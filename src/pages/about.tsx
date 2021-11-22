@@ -21,7 +21,7 @@ const AboutPage: React.FC = () => (
           </div>
         </HeaderContainer>
 
-        <div tw="px-5 py-6 bg-blue-900 bg-opacity-10 sm:rounded-xl shadow-xl">
+        <div tw="px-5 py-6 bg-alabaster bg-opacity-90 sm:rounded-xl shadow-xl">
           <Section>
             <SectionTitle>私について</SectionTitle>
             <SectionInner>

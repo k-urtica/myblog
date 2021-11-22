@@ -35,7 +35,7 @@ const PostCard: React.FC<Props> = (props) => {
               <li key={index}>
                 <AppLink
                   to={getPathByTag(tag)}
-                  tw="bg-purple-100 rounded-xl py-1 px-2"
+                  tw="bg-indigo-200 rounded-xl py-1 px-2 font-bold"
                 >
                   {tag}
                 </AppLink>
