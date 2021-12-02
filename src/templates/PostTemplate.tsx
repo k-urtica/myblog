@@ -54,7 +54,7 @@ const PostTemplate: React.FC<
                       post.frontmatter.cover.childImageSharp.gatsbyImageData
                     }
                     alt={post.frontmatter.title as string}
-                    tw="sm:rounded-2xl mb-0 sm:mb-10 max-h-lg transform"
+                    tw="sm:(rounded-2xl mb-10) mb-0 max-h-lg transform shadow"
                   />
                 )}
               </>
@@ -125,7 +125,7 @@ const Section = tw.section`
 `;
 
 const PostContent = tw.div`
-  py-4 px-3 sm:(rounded-2xl px-9) shadow bg-alabaster
+  py-5 px-4 sm:(rounded-2xl px-12) shadow bg-alabaster
 `;
 
 const PostFooter = tw.div`
