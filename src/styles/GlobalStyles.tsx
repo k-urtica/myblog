@@ -6,32 +6,22 @@ const customStyles = css`
   body {
     ${tw`antialiased`};
     ${tw`font-body`};
-    color: rgba(0, 0, 0, 0.82);
+    color: #334155;
     background-image: linear-gradient(
-        135deg,
-        transparent 0%,
-        transparent 20%,
-        rgba(60, 61, 207, 0.6) 20%,
-        rgba(60, 61, 207, 0.6) 57%,
-        transparent 57%,
-        transparent 64%,
-        rgba(118, 125, 200, 0.6) 64%,
-        rgba(118, 125, 200, 0.6) 100%
-      ),
-      linear-gradient(
-        45deg,
-        transparent 0%,
-        transparent 55%,
-        rgb(60, 61, 207) 55%,
-        rgb(60, 61, 207) 65%,
-        rgb(104, 109, 202) 65%,
-        rgb(104, 109, 202) 86%,
-        transparent 86%,
-        transparent 91%,
-        rgb(147, 157, 196) 91%,
-        rgb(147, 157, 196) 100%
-      ),
-      linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+      45deg,
+      rgb(47, 38, 96) 0%,
+      rgb(47, 38, 96) 1%,
+      rgb(80, 63, 103) 1%,
+      rgb(80, 63, 103) 53%,
+      rgb(113, 87, 110) 53%,
+      rgb(113, 87, 110) 57%,
+      rgb(146, 112, 116) 57%,
+      rgb(146, 112, 116) 69%,
+      rgb(179, 136, 123) 69%,
+      rgb(179, 136, 123) 75%,
+      rgb(212, 161, 130) 75%,
+      rgb(212, 161, 130) 100%
+    );
   }
   a {
     color: #2563eb;

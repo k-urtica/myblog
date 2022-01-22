@@ -38,7 +38,7 @@ const HeaderBar: React.FC = () => (
 );
 
 const HeaderWrapper = tw.header`
-  py-3 bg-gradient-to-r from-indigo-900 to-gray-800 shadow-lg
+  py-3 bg-gradient-to-r from-gray-800 to-indigo-900
 `;
 
 const HeaderContainer = tw.div`
