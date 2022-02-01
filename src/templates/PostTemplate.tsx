@@ -43,46 +43,50 @@ const PostTemplate: React.FC<
         <PageWrapper>
           <article>
             {post?.frontmatter && (
-              <>
-                <Wrapper tw="sm:(mt-8 mb-4)">
-                  <PostHeader frontMatter={post.frontmatter} />
-                </Wrapper>
-
-                {post.frontmatter.cover?.childImageSharp && (
-                  <GatsbyImage
-                    image={
-                      post.frontmatter.cover.childImageSharp.gatsbyImageData
-                    }
-                    alt={post.frontmatter.title as string}
-                    tw="sm:(rounded-2xl mb-10) mb-0 max-h-lg transform shadow"
-                  />
-                )}
-              </>
+              <Wrapper tw="sm:mt-8">
+                <PostHeader frontMatter={post.frontmatter} />
+              </Wrapper>
             )}
 
             <PostWrapper>
               <Section>
                 <PostContent>
-                  <div
-                    className="markdown-body"
-                    dangerouslySetInnerHTML={{ __html: post?.html as string }}
-                  />
+                  {post?.frontmatter && (
+                    <>
+                      {post.frontmatter.cover?.childImageSharp && (
+                        <GatsbyImage
+                          image={
+                            post.frontmatter.cover.childImageSharp
+                              .gatsbyImageData
+                          }
+                          alt={post.frontmatter.title as string}
+                        />
+                      )}
+                    </>
+                  )}
 
-                  <ul tw="grid grid-flow-col auto-cols-max gap-3 mt-16">
-                    {post?.frontmatter?.tags &&
-                      post.frontmatter.tags.map((tag, index) => {
-                        return (
-                          <li key={index}>
-                            <AppLink
-                              to={getPathByTag(tag)}
-                              tw="bg-purple-100 rounded-xl py-1 px-2 text-sm"
-                            >
-                              {tag}
-                            </AppLink>
-                          </li>
-                        );
-                      })}
-                  </ul>
+                  <div tw="py-5 px-4 sm:(rounded-2xl px-12)">
+                    <div
+                      className="markdown-body"
+                      dangerouslySetInnerHTML={{ __html: post?.html as string }}
+                    />
+
+                    <ul tw="grid grid-flow-col auto-cols-max gap-3 mt-16">
+                      {post?.frontmatter?.tags &&
+                        post.frontmatter.tags.map((tag, index) => {
+                          return (
+                            <li key={index}>
+                              <AppLink
+                                to={getPathByTag(tag)}
+                                tw="bg-purple-100 rounded-xl py-1 px-2 text-sm"
+                              >
+                                {tag}
+                              </AppLink>
+                            </li>
+                          );
+                        })}
+                    </ul>
+                  </div>
                 </PostContent>
 
                 <PostFooter>
@@ -117,7 +121,7 @@ const PostTemplate: React.FC<
 };
 
 const PostWrapper = tw.div`
-  grid grid-cols-1 lg:(grid-cols-12 gap-9) mb-10
+  grid grid-cols-1 lg:(grid-cols-12 gap-9) mt-0 sm:my-10
 `;
 
 const Section = tw.section`
@@ -125,7 +129,7 @@ const Section = tw.section`
 `;
 
 const PostContent = tw.div`
-  py-5 px-4 sm:(rounded-2xl px-12) shadow bg-alabaster
+  sm:(rounded-2xl) shadow bg-alabaster overflow-hidden
 `;
 
 const PostFooter = tw.div`
