@@ -2,12 +2,12 @@
 slug: /lookback-2021-11
 title: 月次振り返り ～2021年11月～
 date: 2021-12-01T18:39:46
-updatedAt: ""
+updatedAt: 2022-02-02T10:27:49
 cover: cover.png
 coverCaption: ""
 summary: 2021年11月の振り返り。雑記や個人開発の状況などつらつらと。。 先月は個人開発しているWeb ToolBoxの更新を頑張って、PVも過去最多となり順調でした。
 category: 振り返り
-tags: ["雑記", "個人開発"]
+tags: ["雑記", "個人開発", "生活"]
 ---
 
 Gridsomeで作ったブログをGatsbyで作り直してから、ブログ自体全然更新できてませんでした。。😅
