@@ -35,6 +35,7 @@
     "gatsby-plugin-typegen": "^2.2.4",
     "gatsby-remark-autolink-headers": "^4.1.0",
     "gatsby-remark-external-links": "^0.0.4",
+    "gatsby-remark-hard-breaks": "^1.0.0",
     "gatsby-remark-images": "^5.1.0",
     "gatsby-remark-link-card": "https://github.com/k-urtica/gatsby-remark-link-card.git",
     "gatsby-remark-prismjs": "^5.1.0",
