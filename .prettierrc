@@ -3,5 +3,7 @@
   "singleQuote": true,
   "trailingComma": "es5",
   "importOrder": ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
-  "importOrderSeparation": true
+  "importOrderSeparation": true,
+  "printWidth": 80,
+  "endOfLine": "lf"
 }
