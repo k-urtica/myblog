@@ -1,8 +1,10 @@
+import type { GatsbyConfig } from 'gatsby';
+
 const SITE_TITLE = `K note.dev`;
 const SITE_URL = `https://knote.dev`;
 const DESCRIPTION = `ソフトウェアエンジニア「K」の個人ブログ。個人開発で使うプログラミング等の技術を中心にアウトプットしていきます。`;
 
-module.exports = {
+const config: GatsbyConfig = {
   siteMetadata: {
     title: SITE_TITLE,
     siteUrl: SITE_URL,
@@ -99,8 +101,6 @@ module.exports = {
       resolve: `gatsby-plugin-typegen`,
     },
     `gatsby-plugin-sass`,
-    `gatsby-plugin-emotion`,
-
     {
       resolve: `gatsby-plugin-image`,
       options: {
@@ -139,5 +139,10 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-postcss`,
+    },
   ],
 };
+
+export default config;

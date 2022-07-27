@@ -1,4 +1,6 @@
-// site global css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @font-face {
   font-family: 'ZenMaruGothic Medium';
