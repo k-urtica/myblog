@@ -42,7 +42,8 @@
         "argsIgnorePattern": "^_"
       }
     ],
-    "jsx-a11y/accessible-emoji": "off"
+    "jsx-a11y/accessible-emoji": "off",
+    "react/react-in-jsx-scope": "off"
   },
   "overrides": [
     {
