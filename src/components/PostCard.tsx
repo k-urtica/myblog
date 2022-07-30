@@ -1,89 +1,40 @@
-import styled from '@emotion/styled';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import * as React from 'react';
-import 'twin.macro';
-import tw from 'twin.macro';
-
-import { formatDate, getPathByTag } from '../utils/helpers';
+import { formatDate } from '../utils/helpers';
 import AppLink from './AppLink';
 
-const PostCard: React.FC<Props> = (props) => {
-  const { title, date, path, summary, category, tags, image } = props;
+type Props = {
+  item: GatsbyTypes.MarkdownRemarkFrontmatter;
+  path: string;
+};
+
+const PostCard = ({ item, path }: Props) => {
+  const { title, summary, cover, date } = item;
 
   return (
-    <CardWrapper>
-      <AppLink to={path}>
-        <GatsbyImage image={image.gatsbyImageData} alt={title} tw="block" />
+    <AppLink to={path}>
+      <article className="borde flex flex-col overflow-hidden rounded-xl bg-gradient-to-l from-gray-800/80 to-gray-800/20 hover:bg-gray-800 md:flex-row">
+        <GatsbyImage
+          image={cover?.childImageSharp?.gatsbyImageData}
+          alt={title as string}
+          className="w-full flex-shrink-0 object-cover md:w-52 lg:w-64"
+        />
 
-        <CardInnerWrapper>
-          <CardMeta>
-            <span tw="font-bold text-indigo-600">{category}</span>
-            <time dateTime={date}>
-              <span tw="text-gray-500 text-xs">{formatDate(date)}</span>
+        <div className="flex flex-grow flex-col  rounded-lg px-5 py-4">
+          <div className="mb-1">
+            <time dateTime={date} className="text-sm font-bold text-violet-400">
+              {formatDate(date as string)}
             </time>
-          </CardMeta>
-
-          <CardTitle>{title}</CardTitle>
-          <CardText>{summary}</CardText>
-        </CardInnerWrapper>
-      </AppLink>
-
-      <CardActions>
-        <ul tw="grid grid-flow-col auto-cols-max gap-2">
-          {tags.map((tag, index) => {
-            return (
-              <li key={index}>
-                <AppLink
-                  to={getPathByTag(tag)}
-                  tw="bg-indigo-200 rounded-xl py-1 px-2 font-bold"
-                >
-                  {tag}
-                </AppLink>
-              </li>
-            );
-          })}
-        </ul>
-      </CardActions>
-    </CardWrapper>
+          </div>
+          <h2 className="text-lg font-bold text-gray-100 md:text-xl">
+            {title}
+          </h2>
+          <p className="mt-4 text-sm text-gray-400 line-clamp-3 md:line-clamp-2">
+            {summary}
+          </p>
+        </div>
+      </article>
+    </AppLink>
   );
 };
-
-type Props = {
-  title: string;
-  summary: string;
-  date: string;
-  path: string;
-  category: string;
-  tags: Array<string>;
-  image: Pick<GatsbyTypes.ImageSharp, 'gatsbyImageData'>;
-};
-
-const CardWrapper = tw.div`
-  flex flex-col h-full bg-alabaster overflow-hidden shadow-lg hover:(shadow-2xl bg-yellow-50) duration-500 rounded-lg transform bg-opacity-90
-`;
-
-const CardInnerWrapper = tw.div`
-  w-full px-4 pt-3 mb-4 h-full
-`;
-
-const CardTitle = tw.h2`
-  text-gray-900 text-lg lg:text-xl font-bold mb-3
-`;
-
-const CardText = styled.div`
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  ${tw`text-gray-600 text-sm`}
-`;
-
-const CardMeta = tw.div`
-  flex justify-between mb-1 text-sm
-`;
-
-const CardActions = tw.div`
-  mt-auto px-4 mb-2 text-xs
-`;
 
 export default PostCard;

@@ -6,6 +6,7 @@
   h4,
   h5,
   h6 {
+    color: #e5e7eb;
     font-weight: bold;
     line-height: 1.25;
     padding-bottom: 0.3rem;
@@ -14,21 +15,19 @@
   }
 
   h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   h2 {
-    font-size: 28px;
-    border-bottom: solid 1px #718096;
+    font-size: 24px;
   }
 
   h3 {
-    font-size: 24px;
-    border-bottom: solid 1px #ccc;
+    font-size: 22px;
   }
 
   h4 {
-    font-size: 21px;
+    font-size: 20px;
   }
 
   h5 {
@@ -45,30 +44,30 @@
     overflow: visible;
   }
 
-  a {
-    background-color: transparent;
-    color: #2563eb;
-    &:hover {
-      color: #1e40af;
-    }
-  }
+  // a {
+  //   background-color: transparent;
+  //   color: #2563eb;
+  //   &:hover {
+  //     color: #1e40af;
+  //   }
+  // }
   // 外部リンクかつカード型リンク以外に適用
-  a[target='_blank']:not([class~='preview-notion-container']) {
-    padding-right: 0.45em;
-    &:after {
-      content: '';
-      display: inline-block;
-      position: relative;
-      top: 0.18em;
-      left: 0.2em;
-      width: 0.95em;
-      height: 0.95em;
-      -webkit-mask-image: url('../images/open-in-new.svg');
-      mask-image: url('../images/open-in-new.svg');
-      mask-size: 0.95em 0.95em;
-      background-color: #9ca3af;
-    }
-  }
+  // a[target='_blank']:not([class~='preview-notion-container']) {
+  //   padding-right: 0.45em;
+  //   &:after {
+  //     content: '';
+  //     display: inline-block;
+  //     position: relative;
+  //     top: 0.18em;
+  //     left: 0.2em;
+  //     width: 0.95em;
+  //     height: 0.95em;
+  //     -webkit-mask-image: url('../images/open-in-new.svg');
+  //     mask-image: url('../images/open-in-new.svg');
+  //     mask-size: 0.95em 0.95em;
+  //     background-color: #9ca3af;
+  //   }
+  // }
 
   blockquote {
     border-left: 0.25em solid #a0aec0;
@@ -76,7 +75,6 @@
     margin: 0 0.5rem;
     p,
     li {
-      color: #718096;
       font-size: 0.95rem;
     }
   }
@@ -88,6 +86,7 @@
   pre,
   table,
   ul {
+    color: #babfc7;
     margin-top: 1.5rem;
     margin-bottom: 1.8rem;
     line-height: 1.75rem;
@@ -97,17 +96,18 @@
     display: block;
     overflow: auto;
     width: 100%;
+
     td,
     th {
-      border: 1px solid #dfe2e5;
+      border: thin solid rgba(230, 230, 230, 0.25);
       padding: 6px 13px;
     }
     tr {
-      background-color: #fff;
-      border-top: 1px solid #c6cbd1;
+      background-color: #1f2937;
+      border-top: thin solid rgba(230, 230, 230, 0.25);
     }
     tr:nth-child(2n) {
-      background-color: #f6f8fa;
+      background-color: #374151;
     }
   }
 
@@ -130,7 +130,7 @@
 
   // インラインコード
   .language-text {
-    background-color: rgba(40, 42, 54, 0.9) !important;
+    background-color: rgba(40, 42, 54, 0.8) !important;
     padding: 0.1em 0.4em;
     border-radius: 6px;
     margin: 0 0.2em;
@@ -168,7 +168,7 @@
       line-height: 1.65em;
       border-radius: 6px;
       background-color: rgb(40, 42, 54) !important;
-      box-shadow: rgba(0, 0, 0, 0.55) 0px 6px 10px;
+      box-shadow: rgba(20, 20, 20, 0.2) 0px 5px 10px;
       font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New,
         monospace !important;
       code {
@@ -195,15 +195,16 @@
     height: 120px;
     overflow: hidden;
     border-radius: 6px;
-    border: thin solid rgba(0, 0, 0, 0.1);
+    border: thin solid rgba(230, 230, 230, 0.2);
     transition: 0.25s;
+    background: #1f2937;
 
     .preview-notion-wrapper {
       flex: 1;
       padding: 0.7rem 1.2rem;
 
       .preview-notion-title {
-        color: #6366f1;
+        color: #f3f4f6;
         font-size: 0.9rem;
         font-weight: bold;
         display: -webkit-box;
@@ -212,7 +213,7 @@
         overflow: hidden;
       }
       .preview-notion-description {
-        color: #6b7280;
+        color: #d1d5db;
         font-size: 0.78rem;
         display: -webkit-box;
         -webkit-box-orient: vertical;
@@ -230,7 +231,7 @@
           margin-right: 0.5rem;
         }
         .preview-notion-link {
-          color: #475569;
+          color: #9ca3af;
           font-size: 0.7rem;
           display: -webkit-box;
           -webkit-box-orient: vertical;
@@ -255,8 +256,7 @@
     }
 
     &:hover {
-      box-shadow: 0 4px 6px rgba(20, 20, 20, 0.1);
-      background-color: #eef2ff;
+      background-color: #374151;
     }
   }
 }

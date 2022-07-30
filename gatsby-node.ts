@@ -1,16 +1,30 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
-const { paginate } = require('gatsby-awesome-pagination');
+import { GatsbyNode } from 'gatsby';
 
-const dayjs = require('dayjs');
+import { paginate } from 'gatsby-awesome-pagination';
+
+import dayjs from 'dayjs';
 dayjs.extend(require('dayjs/plugin/utc'));
-const path = require('path');
-const kebabCase = require('lodash.kebabcase');
+import path from 'path';
+import kebabCase from 'lodash.kebabcase';
 
-exports.onCreateNode = ({ node, actions }) => {
+export const onCreateBabelConfig: GatsbyNode['onCreateBabelConfig'] = ({
+  actions,
+}) => {
+  actions.setBabelPreset({
+    name: 'babel-preset-gatsby',
+    options: {
+      reactRuntime: 'automatic',
+    },
+  });
+};
+
+export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
     const { date, slug } = node.frontmatter;
+
     createNodeField({
       node,
       name: `postPath`,
@@ -19,7 +33,10 @@ exports.onCreateNode = ({ node, actions }) => {
   }
 };
 
-exports.createPages = async ({ graphql, actions }) => {
+export const createPages: GatsbyNode['createPages'] = async ({
+  graphql,
+  actions,
+}) => {
   const { createPage } = actions;
 
   const results = await graphql(`
@@ -100,12 +117,11 @@ exports.createPages = async ({ graphql, actions }) => {
     itemsPerPage: 12,
     itemsPerFirstPage: 12,
     pathPrefix: ({ pageNumber }) => (pageNumber === 0 ? `/` : `/page`),
-    component: path.resolve(`./src/templates/index.tsx`),
+    component: path.resolve(`./src/templates/Index.tsx`),
   });
 
-  const categories = results.data.categoryGroup.group;
-
   /* Make Category pages */
+  const categories = results.data.categoryGroup.group;
   categories.forEach((category) => {
     createPage({
       path: `/category/${kebabCase(category.fieldValue)}/`,
@@ -116,9 +132,8 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 
-  const tags = results.data.tagsGroup.group;
-
   /* Make Tag pages */
+  const tags = results.data.tagsGroup.group;
   tags.forEach((tag) => {
     createPage({
       path: `/tag/${kebabCase(tag.fieldValue)}/`,

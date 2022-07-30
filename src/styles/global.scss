@@ -1,8 +1,10 @@
-// site global css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @font-face {
-  font-family: 'ZenMaruGothic Medium';
-  src: url('/font/ZenMaruGothic-Medium.woff2');
+  font-family: 'ZenMaruGothic Regular';
+  src: url('/font/ZenMaruGothic-Regular.woff2');
   font-weight: normal;
   font-display: swap;
 }

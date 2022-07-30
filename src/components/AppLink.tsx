@@ -1,8 +1,12 @@
 import { Link } from 'gatsby';
-import * as React from 'react';
-import { ReactNode } from 'react';
 
-const AppLink: React.FC<Props> = ({ to, children, className }) => {
+type Props = {
+  children: React.ReactNode;
+  to: string;
+  className?: string;
+};
+
+const AppLink = ({ children, to, className }: Props) => {
   if (/^https?:\/\//.test(to)) {
     return (
       <a
@@ -20,12 +24,6 @@ const AppLink: React.FC<Props> = ({ to, children, className }) => {
       {children}
     </Link>
   );
-};
-
-type Props = {
-  to: string;
-  children: ReactNode;
-  className?: string;
 };
 
 export default AppLink;

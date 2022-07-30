@@ -1,4 +1,3 @@
-import * as React from 'react';
 import {
   HatenaShareButton,
   HatenaIcon,
@@ -6,43 +5,30 @@ import {
   TwitterIcon,
   FacebookShareButton,
   FacebookIcon,
-  PocketShareButton,
-  PocketIcon,
-  LineShareButton,
-  LineIcon,
 } from 'react-share';
-import tw from 'twin.macro';
-
-const ShareLinks: React.FC<Props> = ({ url, className }) => {
-  const size = 32;
-  return (
-    <div className={className}>
-      <TwitterShareButton url={url} css={shareBtn}>
-        <TwitterIcon size={size} round />
-      </TwitterShareButton>
-      <FacebookShareButton url={url} css={shareBtn}>
-        <FacebookIcon size={size} round />
-      </FacebookShareButton>
-      <HatenaShareButton url={url} css={shareBtn}>
-        <HatenaIcon size={size} round />
-      </HatenaShareButton>
-      <PocketShareButton url={url} css={shareBtn}>
-        <PocketIcon round size={size} />
-      </PocketShareButton>
-      <LineShareButton url={url} css={shareBtn}>
-        <LineIcon round size={size} />
-      </LineShareButton>
-    </div>
-  );
-};
-
-const shareBtn = tw`
-  mx-1.5 transform hover:scale-125 duration-500
-`;
 
 type Props = {
   url: string;
   className?: string;
+};
+
+const ShareLinks = ({ url, className }: Props) => {
+  const size = 32;
+  return (
+    <div className={className}>
+      <div className="flex justify-center gap-3">
+        <TwitterShareButton url={url} className="">
+          <TwitterIcon size={size} round />
+        </TwitterShareButton>
+        <FacebookShareButton url={url} className="">
+          <FacebookIcon size={size} round />
+        </FacebookShareButton>
+        <HatenaShareButton url={url} className="">
+          <HatenaIcon size={size} round />
+        </HatenaShareButton>
+      </div>
+    </div>
+  );
 };
 
 export default ShareLinks;

@@ -1,10 +1,10 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ['./src/**/*.html', './src/**/*.tsx'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
       body: [
-        'ZenMaruGothic Medium',
+        'ZenMaruGothic Regular',
         '-apple-system',
         'BlinkMacSystemFont',
         'Helvetica',
@@ -14,22 +14,19 @@ module.exports = {
         'sans-serif',
       ],
     },
-    extend: {
-      colors: {
-        alabaster: '#fafafa',
-      },
-      maxHeight: {
-        xs: '20rem',
-        sm: '24rem',
-        md: '28rem',
-        lg: '32rem',
-        xl: '36rem',
-        '2xl': '42rem',
-      },
-    },
-  },
-  variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('daisyui'), require('@tailwindcss/line-clamp')],
+  daisyui: {
+    styled: true,
+
+    darkTheme: 'dark',
+    themes: [
+      {
+        dark: {
+          'base-100': '#111827',
+        },
+      },
+    ],
+  },
 };
