@@ -20,7 +20,7 @@ tags: ["Gatsby", "React", "ブログ構築"]
 
 作り直した理由はGridsomeのメンテ状況が昨年から停滞してきていたことが一番の理由です。
 
-[$card](https://github.com/gridsome/gridsome)
+[Gridsome](https://github.com/gridsome/gridsome)
 
 2021年5月現在、Gridsome本体の最新バージョンは`0.7.23`でリリース日は昨年の11月となっています。それ以降Gridsome公式の各ライブラリも含めて更新がされていない状況です。
 
@@ -49,7 +49,7 @@ Gatsbyにはスターターといって、すでにサイト(ブログ等)が構
 
 なので、いくつかのスターターは参考にさせてもらいましたがブログ自体には使っておらずすべてイチからブログを構築しました！
 
-[$card](https://ja.reactjs.org/tutorial/tutorial.html)
+[チュートリアル：React の導入](https://ja.reactjs.org/tutorial/tutorial.html)
 
 ## Gatsbyブログで入れたライブラリ
 
@@ -61,7 +61,7 @@ UIフレームワークはReactのスタイリング方法の多様さもあっ�
 
 ただし素のTailWindCSSではなく、TailWindCSSをCSS-in-JSとして書けるtwin.macroとemotionを導入しています。
 
-[$card](https://github.com/ben-rogerson/twin.macro)
+[Twin.macro](https://github.com/ben-rogerson/twin.macro)
 
 実際に使用してみて、CSS-in-JSとTailWindCSSの良いところどり？の感じでかなり使いやすい技術スタックだと思っています。
 
@@ -73,7 +73,7 @@ UIフレームワークはReactのスタイリング方法の多様さもあっ�
 
 画像処理系のライブラリはGatsby公式から提供されている`gatsby-plugin-image`を入れました。これはもともと提供されていた`gatsby-image`の後継ライブラリとなります。
 
-[$card](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/)
+[gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/)
 
 Gatsbyの画像処理まわりはかなり高機能ということは知っていたのですが、jpgやpng画像からWebP画像を自動生成してくれるというのが感動しました😆
 
@@ -87,7 +87,7 @@ Gatsbyの画像処理まわりはかなり高機能ということは知って�
 
 そこで使うのが`gatsby-plugin-typegen`です！
 
-[$card](https://github.com/cometkim/gatsby-plugin-typegen)
+[gatsby-plugin-typegen](https://github.com/cometkim/gatsby-plugin-typegen)
 
 プロジェクトのGraphQLスキーマの型定義を自動生成してくれるという素晴らしいライブラリです😄
 
@@ -117,4 +117,4 @@ React自体初めて触る技術だったので、ベストプラクティスみ
 
 ちなみにこのブログのソースコード（リポジトリ）は公開しています👋
 
-[$card](https://github.com/k-urtica/myblog)
+[myblog](https://github.com/k-urtica/myblog)

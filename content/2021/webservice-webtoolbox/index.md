@@ -15,7 +15,7 @@ tags: [個人開発, AWS, Nuxt.js, Vuetify]
 新しいWebサービスを作った😆
 ブラウザ上で利用できるプログラミングやWeb制作などに使えるツール集、**Web ToolBox**↓
 
-[$card](https://web-toolbox.dev/)
+[Web ToolBox](https://web-toolbox.dev/)
 
 ツールの種類としてはBase64エンコード・デコードや文字数・英単語カウント、QRコード生成、JSON整形ツールなど特定のジャンルによらない様々なツールを公開しています。
 （まだまだ数が少ないですが順次色々なツールを追加していく予定です✊）
@@ -191,4 +191,4 @@ Web ToolBoxのコストとしてはAWSの各サービス（Route53、S3、ECR、
 
 **Web ToolBox**よろしくおねがいします👋
 
-[$card](https://web-toolbox.dev/)
+[Web ToolBox](https://web-toolbox.dev/)

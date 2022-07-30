@@ -24,11 +24,11 @@ VSCodeが元となっているだけあって、インテリセンスやシン�
 
 NuxtでMonaco Editorを使うには方法としてはいくつかあると思いますが、Vue.js用のMonaco Editorライブラリがあり、これがNuxtプロジェクトでも導入できるため利用するのがお手軽だと思います。
 
-[$card](https://github.com/FE-Mars/monaco-editor-vue)
+[monaco-editor-vue](https://github.com/FE-Mars/monaco-editor-vue)
 
 似たようなライブラリ↓もありましたが、今回は上記のライブラリを使いたいと思います。
 
-[$card](https://github.com/egoist/vue-monaco)
+[vue-monaco](https://github.com/egoist/vue-monaco)
 
 ### ライブラリインストール
 
@@ -119,4 +119,4 @@ export default Vue.extend({
 NuxtでMonaco Editorを利用する方法について紹介しました。
 若干高機能すぎるかなという場合は以下のエディタもよさげかもです😉
 
-[$card](https://github.com/ajaxorg/ace)
+[ace](https://github.com/ajaxorg/ace)

@@ -22,7 +22,7 @@ Gridsomeで作ったブログをGatsbyで作り直してから、ブログ自体
 
 個人開発は順調で、先月はNuxtとVuetifyで作っているWeb ToolBox↓の更新を頑張っていました！
 
-[$card](https://web-toolbox.dev/)
+[Web ToolBox](https://web-toolbox.dev/)
 
 ブラウザで使えるツール集のサイトなのですが、先月は[パスワードジェネレーター](https://web-toolbox.dev/tools/password-generator)と[XMLフォーマッター](https://web-toolbox.dev/tools/xml-formatter)を追加しました✨ そのほか、サイト全体のデザインを変えたり、、
 
@@ -50,7 +50,7 @@ PVは大幅に伸びました🎉 MAUも順調に伸びてます。
 
 ブログ記事は更新していませんが、、Gatsbyで構築しているこのブログのプロジェクトも先月更新していました。
 
-[$card](https://github.com/k-urtica/myblog)
+[myblog](https://github.com/k-urtica/myblog)
 
 プロジェクトのdependencies全般をアップデートしてGatsby本体もv3の最新へアップデートしました。Gatsbyはいつのまにか[v4がリリース](https://www.gatsbyjs.com/gatsby-4/)されていて、全然気づかなかったのですが、、v4に上げるには他のライブラリも色々動作検証しないといけないのでまだ手付かずです😕
 
