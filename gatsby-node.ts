@@ -117,7 +117,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
     itemsPerPage: 12,
     itemsPerFirstPage: 12,
     pathPrefix: ({ pageNumber }) => (pageNumber === 0 ? `/` : `/page`),
-    component: path.resolve(`./src/templates/Index.tsx`),
+    component: path.resolve(`./src/templates/index.tsx`),
   });
 
   /* Make Category pages */
