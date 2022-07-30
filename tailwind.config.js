@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       body: [
-        'ZenMaruGothic Medium',
+        'ZenMaruGothic Regular',
         '-apple-system',
         'BlinkMacSystemFont',
         'Helvetica',
