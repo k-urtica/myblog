@@ -1,3 +1,4 @@
+import Footer from '../components/Footer';
 import HeaderBar from '../components/HeaderBar';
 
 type Props = {
@@ -11,6 +12,8 @@ const Layout = ({ children }: Props) => (
     <main className="container mx-auto max-w-screen-xl px-4 pt-12 pb-16">
       {children}
     </main>
+
+    <Footer />
   </div>
 );
 
