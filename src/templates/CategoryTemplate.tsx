@@ -21,7 +21,7 @@ const CategoryTemplate = ({ data, pageContext }: Props) => {
       <Layout>
         <div className="grid gap-6 md:grid-cols-12">
           <div className="col-span-12 md:col-span-8 xl:col-span-9">
-            <div className="px-4 md:px-6 xl:px-9">
+            <div className="md:px-6 xl:px-9">
               <div className="mb-10 text-center">
                 <div className="mb-1 font-bold text-gray-300">Category</div>
                 <h2 className="text-2xl font-bold text-gray-100">

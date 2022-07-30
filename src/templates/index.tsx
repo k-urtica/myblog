@@ -22,7 +22,7 @@ const IndexPage = ({ data, pageContext }: Props) => {
       <Layout>
         <div className="grid gap-6 md:grid-cols-12">
           <div className="col-span-12 md:col-span-8 xl:col-span-9">
-            <div className="px-4 md:px-6 xl:px-9">
+            <div className="md:px-6 xl:px-9">
               <PostCardList posts={data} />
 
               <div className="mt-4">

@@ -8,7 +8,7 @@ const Layout = ({ children }: Props) => (
   <div className="font-body antialiased">
     <HeaderBar />
 
-    <main className="container mx-auto max-w-screen-xl pt-12 pb-16">
+    <main className="container mx-auto max-w-screen-xl px-4 pt-12 pb-16">
       {children}
     </main>
   </div>
