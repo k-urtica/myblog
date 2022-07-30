@@ -64,7 +64,7 @@ const config: GatsbyConfig = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1000,
-              quality: 80,
+              quality: 90,
               withWebp: true,
             },
           },
@@ -104,11 +104,15 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-image`,
       options: {
-        quality: 80,
+        quality: 90,
       },
     },
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+    },
+    {
+      resolve: `gatsby-transformer-sharp`,
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
