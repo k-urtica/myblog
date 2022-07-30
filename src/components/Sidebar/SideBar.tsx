@@ -1,4 +1,5 @@
 import { StaticImage } from 'gatsby-plugin-image';
+import Contact from './Contact';
 
 const Sidebar = () => {
   return (
@@ -24,6 +25,8 @@ const Sidebar = () => {
             フロントエンド／バックエンドエンジニア。個人開発ではおもにVue.js、NuxtJSをメインに使っています。
           </p>
         </div>
+
+        <Contact className="mt-4" />
       </div>
     </aside>
   );
