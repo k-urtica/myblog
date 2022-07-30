@@ -20,6 +20,7 @@ const PostTemplate = ({ data, pageContext }: Props) => {
   const post = data.markdownRemark as GatsbyTypes.MarkdownRemark;
   const { frontmatter } = post;
   const { next, previous } = pageContext;
+  const shareUrl = `${data?.site?.siteMetadata?.siteUrl}${post?.fields?.postPath}`;
 
   return (
     <>
@@ -53,7 +54,7 @@ const PostTemplate = ({ data, pageContext }: Props) => {
                 </section>
 
                 <div className="mt-14 border-t border-gray-400/50 py-6">
-                  <PostFooter next={next} prev={previous} />
+                  <PostFooter share={shareUrl} next={next} prev={previous} />
                 </div>
               </div>
             </div>
