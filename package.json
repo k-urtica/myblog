@@ -50,7 +50,6 @@
     "react-dom": "^18.2.0",
     "react-helmet-async": "^1.0.9",
     "react-share": "^4.4.0",
-    "react-tsparticles": "^1.37.4",
     "sass": "^1.32.12"
   },
   "devDependencies": {
