@@ -3,9 +3,9 @@
 
 <h1 align="center">🐈 K note.dev 😄</h1>
 
-![](https://user-images.githubusercontent.com/46732829/117561285-62ab1f00-b0d0-11eb-9d13-aee348d30665.png)
+![](https://user-images.githubusercontent.com/46732829/181914356-4de67347-0985-4db2-a45a-fc3014b1126b.png)
 
-My personal blog made with Gatsby!
+My personal blog made with Gatsby💚
 
 ## ⭐️ URL
 
