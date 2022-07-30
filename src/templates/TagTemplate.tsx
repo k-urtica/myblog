@@ -1,105 +1,43 @@
-import { mdiTagOutline } from '@mdi/js';
-import Icon from '@mdi/react';
-import { graphql, PageProps } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import * as React from 'react';
-import 'twin.macro';
-import tw from 'twin.macro';
+import { graphql } from 'gatsby';
+import PostCardList from '../components/PostCardList';
 
-import AppLink from '../components/AppLink';
-import PageWrapper from '../components/PageWrapper';
 import SEO from '../components/Seo';
+import Sidebar from '../components/Sidebar/SideBar';
 import Layout from '../layouts/Layout';
-import { formatDate } from '../utils/helpers';
 
-const TagTemplate: React.FC<
-  PageProps<GatsbyTypes.PostByTagQuery, PageContext>
-> = ({ data, pageContext }) => {
-  const { edges, totalCount } = data.allMarkdownRemark;
+type Props = {
+  data: GatsbyTypes.PostByTagQuery;
+  pageContext: {
+    tag: string;
+  };
+};
+
+const TagTemplate = ({ data, pageContext }: Props) => {
   const tagName = pageContext.tag;
   return (
     <>
-      <SEO title={`タグ：${tagName}`} />
+      <SEO title={`Tag: ${tagName}`} />
 
       <Layout>
-        <PageWrapper>
-          <InnerWrapper>
-            <HeaderContainer>
-              <div tw="text-center">
-                <span tw="inline-block text-2xl font-bold border-b-2 border-gray-700 px-4 pb-2">
-                  Tag
-                </span>
+        <div className="grid gap-6 md:grid-cols-12">
+          <div className="col-span-12 md:col-span-8 xl:col-span-9">
+            <div className="px-4 md:px-6 xl:px-9">
+              <div className="mb-10 text-center">
+                <div className="mb-1 font-bold text-gray-300">Tag</div>
+                <h2 className="text-2xl font-bold text-gray-100">{tagName}</h2>
               </div>
 
-              <TagTitle>
-                <Icon path={mdiTagOutline} size={1.1} tw="inline mr-3" />
-                {tagName}
-              </TagTitle>
-              <h2 tw="text-lg text-gray-500">
-                A collection of {totalCount} post
-              </h2>
-            </HeaderContainer>
-
-            <div tw="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6">
-              {edges.map((tag, index) => {
-                const fr = tag.node.frontmatter;
-                return (
-                  <AppLink key={index} to={tag.node.fields?.postPath as string}>
-                    <CardWrapper>
-                      <div tw="flex">
-                        <div tw="w-1/3">
-                          {fr?.cover?.childImageSharp?.gatsbyImageData && (
-                            <GatsbyImage
-                              image={fr.cover.childImageSharp.gatsbyImageData}
-                              alt={fr.title as string}
-                              tw="block"
-                            />
-                          )}
-                        </div>
-
-                        <div tw="w-2/3 px-2">
-                          <div tw="flex flex-col h-full">
-                            <h2 tw="text-sm lg:text-base">{fr?.title}</h2>
-                            <div tw="mt-auto">
-                              <time dateTime={fr?.date}>
-                                <span tw="text-gray-500 text-xs">
-                                  {formatDate(fr?.date as string)}
-                                </span>
-                              </time>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </CardWrapper>
-                  </AppLink>
-                );
-              })}
+              <PostCardList posts={data} />
             </div>
-          </InnerWrapper>
-        </PageWrapper>
+          </div>
+
+          <div className="col-span-12 md:col-span-4 xl:col-span-3">
+            <Sidebar />
+          </div>
+        </div>
       </Layout>
     </>
   );
-};
-
-const InnerWrapper = tw.div`
-  px-3
-`;
-
-const HeaderContainer = tw.div`
-  my-10 border-b border-gray-300
-`;
-
-const TagTitle = tw.h1`
-  text-3xl sm:text-5xl font-bold mt-8 mb-3
-`;
-
-const CardWrapper = tw.div`
-   w-full bg-alabaster rounded shadow hover:(shadow-2xl bg-yellow-50) duration-500 overflow-hidden p-3
-`;
-
-type PageContext = {
-  tag: string;
 };
 
 export const pageQuery = graphql`

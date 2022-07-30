@@ -1,48 +1,46 @@
-import { graphql, PageProps } from 'gatsby';
-import * as React from 'react';
-import 'twin.macro';
-
-import HeroHeader from '../components/HeroHeader';
+import { graphql } from 'gatsby';
 import PageNation from '../components/PageNation';
-import PageWrapper from '../components/PageWrapper';
-import PostCardWrapper from '../components/PostCardWrapper';
+import PostCardList from '../components/PostCardList';
+
 import SEO from '../components/Seo';
-import Wrapper from '../components/Wrapper';
+import Sidebar from '../components/Sidebar/SideBar';
 import Layout from '../layouts/Layout';
 
-const IndexPage: React.FC<
-  PageProps<GatsbyTypes.AllPostsQuery, PageContext>
-> = ({ data, pageContext }) => {
-  const { nextPagePath, previousPagePath } = pageContext;
+type Props = {
+  data: GatsbyTypes.AllPostsQuery;
+  pageContext: {
+    nextPagePath: string;
+    previousPagePath: string;
+  };
+};
 
+const IndexPage = ({ data, pageContext }: Props) => {
   return (
     <>
       <SEO titleTemplate={data.site?.siteMetadata?.title} />
 
       <Layout>
-        <PageWrapper>
-          <Wrapper tw="sm:mt-8 mb-10">
-            <HeroHeader />
-          </Wrapper>
+        <div className="grid gap-6 md:grid-cols-12">
+          <div className="col-span-12 md:col-span-8 xl:col-span-9">
+            <div className="px-4 md:px-6 xl:px-9">
+              <PostCardList posts={data} />
 
-          <Wrapper tw="px-4 sm:px-0 mb-10">
-            <PostCardWrapper allMarkdownRemark={data.allMarkdownRemark} />
+              <div className="mt-4">
+                <PageNation
+                  nextPage={pageContext.nextPagePath}
+                  prevPage={pageContext.previousPagePath}
+                />
+              </div>
+            </div>
+          </div>
 
-            <PageNation
-              nextPagePath={nextPagePath}
-              prevPagePath={previousPagePath}
-              tw="mt-14 py-4 text-center"
-            />
-          </Wrapper>
-        </PageWrapper>
+          <div className="col-span-12 md:col-span-4 xl:col-span-3">
+            <Sidebar />
+          </div>
+        </div>
       </Layout>
     </>
   );
-};
-
-type PageContext = {
-  nextPagePath: string;
-  previousPagePath: string;
 };
 
 export const query = graphql`

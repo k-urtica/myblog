@@ -1,41 +1,30 @@
-import * as React from 'react';
-import 'twin.macro';
-import tw from 'twin.macro';
-
 import AppLink from './AppLink';
 
-const PageNation: React.FC<Props> = (props) => {
-  const { nextPagePath, prevPagePath, className } = props;
-
-  return (
-    <div className={className}>
-      {prevPagePath === '' ? (
-        <DisableText>{'< Prev'}</DisableText>
-      ) : (
-        <ActiveLink to={prevPagePath}>{'< Prev'}</ActiveLink>
-      )}
-
-      {nextPagePath === '' ? (
-        <DisableText>{'Next >'}</DisableText>
-      ) : (
-        <ActiveLink to={nextPagePath}>{'Next >'}</ActiveLink>
-      )}
-    </div>
-  );
+type Props = {
+  nextPage: string;
+  prevPage: string;
 };
 
-const DisableText = tw.span`
-  mx-3 py-2 px-3 bg-blue-800 opacity-50 text-alabaster rounded-2xl font-bold
-`;
+const PageNation = ({ nextPage, prevPage }: Props) => {
+  return (
+    <div className="flex justify-between">
+      <div>
+        {prevPage && (
+          <AppLink to={prevPage} className="btn btn-ghost">
+            Prev
+          </AppLink>
+        )}
+      </div>
 
-const ActiveLink = tw(AppLink)`
-  mx-3 py-2 px-3 bg-blue-800 text-alabaster hover:text-yellow-200 rounded-2xl font-bold
-`;
-
-type Props = {
-  className?: string;
-  nextPagePath: string;
-  prevPagePath: string;
+      <div>
+        {nextPage && (
+          <AppLink to={nextPage} className="btn btn-ghost">
+            Next
+          </AppLink>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default PageNation;

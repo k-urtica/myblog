@@ -1,148 +1,71 @@
-import { graphql, PageProps } from 'gatsby';
+import { graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import * as React from 'react';
-import 'twin.macro';
-import tw from 'twin.macro';
+import PostFooter from '../components/PostFooter';
+import PostHeader from '../components/PostHeader';
 
-import Ads from '../components/Ads';
-import AppLink from '../components/AppLink';
-import PageWrapper from '../components/PageWrapper';
-import PostAuthor from '../components/PostFooter/PostAuthor';
-import PrevNextPost from '../components/PostFooter/PrevNextPost';
-import PostHeader from '../components/PostHeader/PostHeader';
-import PostAuthorSide from '../components/PostSideBar/PostAuthorSide';
-import PostToc from '../components/PostSideBar/PostToc';
 import SEO from '../components/Seo';
-import ShareLinks from '../components/ShareLinks';
-import Wrapper from '../components/Wrapper';
+import Sidebar from '../components/Sidebar/SideBar';
 import Layout from '../layouts/Layout';
 import '../styles/markdown.scss';
-import { getPathByTag } from '../utils/helpers';
 
-const PostTemplate: React.FC<
-  PageProps<GatsbyTypes.BlogPostQuery, PageContext>
-> = ({ data, pageContext }) => {
-  const post = data.markdownRemark;
+type Props = {
+  data: GatsbyTypes.BlogPostQuery;
+  pageContext: {
+    next: GatsbyTypes.Maybe<GatsbyTypes.MarkdownRemark>;
+    previous: GatsbyTypes.Maybe<GatsbyTypes.MarkdownRemark>;
+  };
+};
+
+const PostTemplate = ({ data, pageContext }: Props) => {
+  const post = data.markdownRemark as GatsbyTypes.MarkdownRemark;
+  const { frontmatter } = post;
   const { next, previous } = pageContext;
-
-  let pageUrl = '';
-  if (data.site?.siteMetadata?.siteUrl && post?.fields) {
-    pageUrl = ((data.site.siteMetadata.siteUrl as string) +
-      post.fields.postPath) as string;
-  }
 
   return (
     <>
       <SEO
-        title={post?.frontmatter?.title}
-        description={post?.frontmatter?.summary}
-        image={post?.frontmatter?.cover?.childImageSharp}
+        title={frontmatter?.title}
+        description={frontmatter?.summary}
+        image={frontmatter?.cover?.childImageSharp}
       />
 
       <Layout>
-        <PageWrapper>
-          <article>
-            {post?.frontmatter && (
-              <Wrapper tw="sm:mt-8">
-                <PostHeader frontMatter={post.frontmatter} />
-              </Wrapper>
-            )}
+        <article>
+          <div className="pb-8">
+            <PostHeader frontmatter={frontmatter!} />
+          </div>
 
-            <PostWrapper>
-              <Section>
-                <PostContent>
-                  {post?.frontmatter && (
-                    <>
-                      {post.frontmatter.cover?.childImageSharp && (
-                        <GatsbyImage
-                          image={
-                            post.frontmatter.cover.childImageSharp
-                              .gatsbyImageData
-                          }
-                          alt={post.frontmatter.title as string}
-                        />
-                      )}
-                    </>
-                  )}
-
-                  <div tw="py-5 px-4 sm:(rounded-2xl px-12)">
-                    <div
-                      className="markdown-body"
-                      dangerouslySetInnerHTML={{ __html: post?.html as string }}
-                    />
-
-                    <ul tw="grid grid-flow-col auto-cols-max gap-3 mt-16">
-                      {post?.frontmatter?.tags &&
-                        post.frontmatter.tags.map((tag, index) => {
-                          return (
-                            <li key={index}>
-                              <AppLink
-                                to={getPathByTag(tag)}
-                                tw="bg-purple-100 rounded-xl py-1 px-2 text-sm"
-                              >
-                                {tag}
-                              </AppLink>
-                            </li>
-                          );
-                        })}
-                    </ul>
-                  </div>
-                </PostContent>
-
-                <PostFooter>
-                  <PostAuthor />
-
-                  <ShareLinks url={pageUrl} tw="text-center mt-4 py-3" />
-
-                  <Ads tw="my-3" />
-
-                  <Wrapper tw="my-10 px-4 sm:px-0">
-                    <PrevNextPost next={next} prev={previous} />
-                  </Wrapper>
-                </PostFooter>
-              </Section>
-
-              <SideContainer>
-                <Wrapper tw="mb-6">
-                  <PostAuthorSide />
-                </Wrapper>
-                {post?.headings && (
-                  <Wrapper tw="sticky top-0.5">
-                    <PostToc headings={post.headings} />
-                  </Wrapper>
+          <div className="grid grid-cols-12 gap-6">
+            <div className="col-span-12 md:col-span-8 xl:col-span-9">
+              <div className="px-4 md:px-6 xl:px-9">
+                {frontmatter?.cover?.childImageSharp && (
+                  <GatsbyImage
+                    image={frontmatter.cover.childImageSharp.gatsbyImageData}
+                    alt={frontmatter?.title as string}
+                    className="rounded-xl"
+                  />
                 )}
-              </SideContainer>
-            </PostWrapper>
-          </article>
-        </PageWrapper>
+                <section className="pt-6">
+                  <div
+                    className="markdown-body"
+                    dangerouslySetInnerHTML={{ __html: post.html as string }}
+                  />
+                </section>
+
+                <div className="mt-14 border-t border-gray-400/50 py-6">
+                  <PostFooter next={next} prev={previous} />
+                </div>
+              </div>
+            </div>
+
+            <div className="col-span-12 md:col-span-4 xl:col-span-3">
+              <Sidebar />
+            </div>
+          </div>
+        </article>
       </Layout>
     </>
   );
-};
-
-const PostWrapper = tw.div`
-  grid grid-cols-1 lg:(grid-cols-12 gap-9) mt-0 sm:my-10
-`;
-
-const Section = tw.section`
-  lg:col-span-8 xl:col-span-9
-`;
-
-const PostContent = tw.div`
-  sm:(rounded-2xl) shadow bg-alabaster overflow-hidden
-`;
-
-const PostFooter = tw.div`
-  mt-6
-`;
-
-const SideContainer = tw.aside`
-  hidden lg:(col-span-4 block) xl:col-span-3
-`;
-
-type PageContext = {
-  next: GatsbyTypes.Maybe<GatsbyTypes.MarkdownRemark>;
-  previous: GatsbyTypes.Maybe<GatsbyTypes.MarkdownRemark>;
 };
 
 export const pageQuery = graphql`

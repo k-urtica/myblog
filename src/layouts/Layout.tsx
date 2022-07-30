@@ -1,25 +1,17 @@
-import PropTypes from 'prop-types';
-import * as React from 'react';
-import 'twin.macro';
-
-import Footer from '../components/Footer';
 import HeaderBar from '../components/HeaderBar';
-import GlobalStyles from '../styles/GlobalStyles';
 
-const Layout: React.FC = ({ children }) => (
-  <>
-    <GlobalStyles />
-
-    <div tw="flex flex-col min-h-screen">
-      <HeaderBar />
-      <main tw="flex-grow">{children}</main>
-      <Footer />
-    </div>
-  </>
-);
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+type Props = {
+  children: React.ReactNode;
 };
+
+const Layout = ({ children }: Props) => (
+  <div className="font-body antialiased">
+    <HeaderBar />
+
+    <main className="container mx-auto max-w-screen-xl pt-12 pb-16">
+      {children}
+    </main>
+  </div>
+);
 
 export default Layout;
