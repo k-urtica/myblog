@@ -44,9 +44,10 @@
     overflow: visible;
   }
 
-  a {
+  a:not([class~='preview-notion-container']) {
     color: #60a5fa;
     font-weight: bold;
+    text-decoration: underline;
     &:hover {
       color: #3b82f6;
     }
