@@ -18,7 +18,7 @@ tags: [Gridsome, Vue.js, JSライブラリ]
 で、"Meidumのようなライトボックス"ですが、これは実際に見たほうが早いかと思います。
 ちょうどMedium公式で画像を多用している良い記事があったのでリンクします。
 
-[一枚の絵は一千語に匹敵する. ストーリーに写真や画像を効果的に掲載するためのティップス | by Medium Japan | for Shirusu | Medium](https://medium.com/for-shirusu/tips-and-tricks-for-posting-photos-and-images-on-medium-6800b157b5a2)
+[$card](https://medium.com/for-shirusu/tips-and-tricks-for-posting-photos-and-images-on-medium-6800b157b5a2)
 
 上記記事内の画像をクリックしてみてください。拡大表示されるのですが、ヌルっとした感じで拡大表示されることがわかると思います。
 
@@ -30,7 +30,7 @@ tags: [Gridsome, Vue.js, JSライブラリ]
 
 その名もずばり"medium-zoom"。
 
-[medium-zoom](https://github.com/francoischalifour/medium-zoom)
+[$card](https://github.com/francoischalifour/medium-zoom)
 
 このライブラリを使うことで、まんまMediumと同じライトボックスを実装できます。Gridsomeでも問題なく使用できるのでそのやり方を紹介したいと思います。
 

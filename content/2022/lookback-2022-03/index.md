@@ -16,7 +16,7 @@ tags: ["雑記", "個人開発", "生活"]
 
 個人開発しているWeb ToolBoxですが、2月〜3月にかけてかなり更新しました。
 
-[Web ToolBox](https://web-toolbox.dev)
+[$card](https://web-toolbox.dev)
 
 ### 新規ツールの追加
 
@@ -29,7 +29,7 @@ PCでも内蔵カメラやWebカメラがあればそのカメラを使ってQR�
 
 また、QRコードが写っている画像ファイルからQRコードをスキャンすることもできます。
 
-[QRコードリーダー](https://web-toolbox.dev/tools/qrcode-reader)
+[$card](https://web-toolbox.dev/tools/qrcode-reader)
 
 👉 PCからQRコードを読み取りたいことがあったので追加。
 
@@ -37,14 +37,14 @@ PCでも内蔵カメラやWebカメラがあればそのカメラを使ってQR�
 
 エポック秒と日付を相互に変換できる、エポック秒コンバーターを追加しました。
 
-[エポック秒コンバーター](https://web-toolbox.dev/tools/epoch-converter)
+[$card](https://web-toolbox.dev/tools/epoch-converter)
 
 #### Border Radiusジェネレーター
 
 CSSの`border-radius`を生成できるBorder Radiusジェネレーターを追加しました。
 シンプルな形状のborder-radiusの他に、より複雑な形状のborder-radiusも生成可能です。
 
-[Border Radiusジェネレーター](https://web-toolbox.dev/tools/border-radius-generator)
+[$card](https://web-toolbox.dev/tools/border-radius-generator)
 
 👉 このツールのために改めてborder-radiusについて調べましたが、結構奥が深かったです。
 
@@ -62,7 +62,7 @@ UIフレームワークにVuetifyを使っているので、実装自体はそ�
 開発面の話ですが、今までGitHubのタグやリリース機能は使っていなかったのですが、ちゃんと使うようにしました。
 リリース(ドラフト)を自動で作成してくれるrelease-drafterも導入しました。
 
-[release-drafter](https://github.com/release-drafter/release-drafter)
+[$card](https://github.com/release-drafter/release-drafter)
 
 release-drafterはプルリクのラベルから良い感じにリリースドラフトを作成してくれます。
 なので、今までmainブランチしか基本的に使っていませんでしたが、ブランチ戦略も変えました。

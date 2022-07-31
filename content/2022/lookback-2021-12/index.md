@@ -22,7 +22,7 @@ tags: ["雑記", "個人開発", "生活"]
 
 踏破した都道府県を日本地図でみんなに共有することができる登録不要で誰でも利用できるWebサービスです。  
 
-[日本踏破図🗾](https://traverse-japan.dev/)
+[$card](https://traverse-japan.dev/)
 
 NuxtJSとVuetifyで開発してインフラはVercelを利用しています。  
 Nuxtはbridgeを利用していて、Nitroエンジンを利用してVercelのServerless FunctionsへSSRしています。  
@@ -37,7 +37,7 @@ SSRなのは動的OGPを利用するため。技術的にもう少し詳しい�
 
 ブラウザで使えるツール集のWebサービスを開発しています。
 
-[Web ToolBox](https://web-toolbox.dev)
+[$card](https://web-toolbox.dev)
 
 が、12月は上記の日本踏破図🗾の開発をしていたこともあって、新しいツールの追加や大きな更新などはできませんでした。
 
