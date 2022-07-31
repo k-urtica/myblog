@@ -37,7 +37,6 @@
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-hard-breaks": "^1.0.0",
     "gatsby-remark-images": "^6.19.0",
-    "gatsby-remark-link-card": "https://github.com/k-urtica/gatsby-remark-link-card.git",
     "gatsby-remark-prismjs": "^6.19.0",
     "gatsby-remark-prismjs-title": "^1.0.0",
     "gatsby-source-filesystem": "^4.19.0",
