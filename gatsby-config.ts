@@ -90,6 +90,9 @@ const config: GatsbyConfig = {
           {
             resolve: 'gatsby-remark-hard-breaks',
           },
+          {
+            resolve: `gatsby-remark-embed-link`,
+          },
           `@fec/remark-a11y-emoji/gatsby`,
         ],
       },
