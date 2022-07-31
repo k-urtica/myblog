@@ -5,7 +5,8 @@ import { GatsbyNode } from 'gatsby';
 import { paginate } from 'gatsby-awesome-pagination';
 
 import dayjs from 'dayjs';
-dayjs.extend(require('dayjs/plugin/utc'));
+import utc from 'dayjs/plugin/utc';
+dayjs.extend(utc);
 import path from 'path';
 import kebabCase from 'lodash.kebabcase';
 
