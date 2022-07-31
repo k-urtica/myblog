@@ -15,7 +15,7 @@ tags: [個人開発, Vue.js, Vuetify, Webサービス]
 もう開発してリリースしたのは１年も前なのですが、、
 QiitaのAPIを利用したWebサービス、QT Visualizer｜【Qiita技術記事のランキング】というものを作りました（作って運用しています）
 
-[QT Visualizer｜【Qiita技術記事のランキング】](https://qtvisualizer.com/)
+[$card](https://qtvisualizer.com/)
 
 リリース後Qiitaに投稿したのみでこのWebサービスについてあまり紹介できていなかったので今回改めてブログで紹介したいと思います。
 
@@ -71,7 +71,7 @@ Qiitaは記事にタグ付けすることができます。QT Visualizerはタ�
 また、Qiita APIで取得した記事データはMongoDBに格納しているのですがリクエストのたびにMongoDBからデータを取って加工してレスポンスするというのはパフォーマンス的によくないため、flaskからはほぼアクセスしません。
 あらかじめデータ加工バッチによって、MongoDBのデータを加工してRedis/S3に入れておくという運用をしています。
 
-[flask](https://github.com/pallets/flask)
+[$card](https://github.com/pallets/flask)
 
 - flask
 - Redis
