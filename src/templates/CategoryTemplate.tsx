@@ -6,7 +6,7 @@ import Sidebar from '../components/Sidebar/SideBar';
 import Layout from '../layouts/Layout';
 
 type Props = {
-  data: GatsbyTypes.PostByCategoryQuery;
+  data: Queries.PostByCategoryQuery;
   pageContext: {
     category: string;
   };

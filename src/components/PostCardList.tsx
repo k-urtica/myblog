@@ -1,7 +1,7 @@
 import PostCard from './PostCard';
 
 type Props = {
-  posts: GatsbyTypes.AllPostsQuery | GatsbyTypes.PostByCategoryQuery;
+  posts: Queries.AllPostsQuery | Queries.PostByCategoryQuery;
 };
 
 const PostList = ({ posts }: Props) => {
@@ -12,7 +12,7 @@ const PostList = ({ posts }: Props) => {
       {edges.map((edge, i) => (
         <PostCard
           key={i}
-          item={edge.node.frontmatter as GatsbyTypes.MarkdownRemarkFrontmatter}
+          item={edge.node.frontmatter as Queries.MarkdownRemarkFrontmatter}
           path={edge.node.fields?.postPath as string}
         />
       ))}

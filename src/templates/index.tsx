@@ -7,7 +7,7 @@ import Sidebar from '../components/Sidebar/SideBar';
 import Layout from '../layouts/Layout';
 
 type Props = {
-  data: GatsbyTypes.AllPostsQuery;
+  data: Queries.AllPostsQuery;
   pageContext: {
     nextPagePath: string;
     previousPagePath: string;
@@ -17,7 +17,7 @@ type Props = {
 const IndexPage = ({ data, pageContext }: Props) => {
   return (
     <>
-      <SEO titleTemplate={data.site?.siteMetadata?.title} />
+      <SEO titleTemplate={data.site?.siteMetadata?.title as string} />
 
       <Layout>
         <div className="grid gap-6 md:grid-cols-12">

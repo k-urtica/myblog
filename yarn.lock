@@ -1325,39 +1325,6 @@
     "@graphql-tools/utils" "^8.8.0"
     tslib "~2.4.0"
 
-"@graphql-codegen/flow-operations@^2.2.13":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/flow-operations/-/flow-operations-2.3.2.tgz#a8af44f8012efa5524766ab33cf411c556c8472c"
-  integrity sha512-kBggoeI+K0dyw7vlIrh+i9SGaZQ+eY6L/VVatW/Qi2fw2Yre0yDTXMeTrw2BVt2UuC5lZ3QhDBxrjMCUJQqCnw==
-  dependencies:
-    "@graphql-codegen/flow" "^2.3.2"
-    "@graphql-codegen/plugin-helpers" "^2.6.0"
-    "@graphql-codegen/visitor-plugin-common" "2.12.0"
-    auto-bind "~4.0.0"
-    tslib "~2.4.0"
-
-"@graphql-codegen/flow-resolvers@^2.2.14":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/flow-resolvers/-/flow-resolvers-2.3.2.tgz#62a845d24ba81a06a844f7e6a0518ed1a046c2b1"
-  integrity sha512-kCZ1MuxIkQJDc1hCS2KAc5YG/ga8gfl1+p/IOpca/7/j8252DeXDNv2uoIP0QBiDRPcQiuY8qJFwlPwcdR906w==
-  dependencies:
-    "@graphql-codegen/flow" "^2.3.2"
-    "@graphql-codegen/plugin-helpers" "^2.6.0"
-    "@graphql-codegen/visitor-plugin-common" "2.12.0"
-    "@graphql-tools/utils" "^8.8.0"
-    auto-bind "~4.0.0"
-    tslib "~2.4.0"
-
-"@graphql-codegen/flow@^2.2.13", "@graphql-codegen/flow@^2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/flow/-/flow-2.3.2.tgz#c16582a6a777627656c21632c8537ba69739e4d9"
-  integrity sha512-VrGrPHywU0AeXxn1ggjrQQk6Oe6fgBBwVdhFsPGnDWT6+X3YjT2+BTxbnmITO1SGLhuf+P+v0GlFs354l8wQSw==
-  dependencies:
-    "@graphql-codegen/plugin-helpers" "^2.6.0"
-    "@graphql-codegen/visitor-plugin-common" "2.12.0"
-    auto-bind "~4.0.0"
-    tslib "~2.4.0"
-
 "@graphql-codegen/plugin-helpers@^2.4.2", "@graphql-codegen/plugin-helpers@^2.5.0", "@graphql-codegen/plugin-helpers@^2.6.0":
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/plugin-helpers/-/plugin-helpers-2.6.0.tgz#ae7005e6a2dcb0095ae350970c41606906048a27"
@@ -1379,7 +1346,7 @@
     "@graphql-tools/utils" "^8.8.0"
     tslib "~2.4.0"
 
-"@graphql-codegen/typescript-operations@^2.3.5", "@graphql-codegen/typescript-operations@^2.4.2":
+"@graphql-codegen/typescript-operations@^2.3.5":
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript-operations/-/typescript-operations-2.5.2.tgz#17dd6837eadb5bcd42b0c822b78f75c44a9a3c0b"
   integrity sha512-iFZsdsF4380WrN2UQHfgLjrjyo9VFIsZuCaHe1OoC4fQQ+P3t/GfJ0aj0hc5hNwTNJZ3BzBLHSRgE6wqO4591A==
@@ -1390,19 +1357,7 @@
     auto-bind "~4.0.0"
     tslib "~2.4.0"
 
-"@graphql-codegen/typescript-resolvers@^2.6.6":
-  version "2.7.2"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript-resolvers/-/typescript-resolvers-2.7.2.tgz#c5475400e505b145e956f6695944b00c77d341e0"
-  integrity sha512-Yo0ab37mG438z8xcdtApDyTECqfdH2CeamKTjTQiOxeUBCWZt0MgIjt6jIz2ZTQJVsL7AO5aFjPDoS+00dkLQA==
-  dependencies:
-    "@graphql-codegen/plugin-helpers" "^2.6.0"
-    "@graphql-codegen/typescript" "^2.7.2"
-    "@graphql-codegen/visitor-plugin-common" "2.12.0"
-    "@graphql-tools/utils" "^8.8.0"
-    auto-bind "~4.0.0"
-    tslib "~2.4.0"
-
-"@graphql-codegen/typescript@^2.4.8", "@graphql-codegen/typescript@^2.5.1", "@graphql-codegen/typescript@^2.7.2":
+"@graphql-codegen/typescript@^2.4.8", "@graphql-codegen/typescript@^2.7.2":
   version "2.7.2"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript/-/typescript-2.7.2.tgz#ad47ad1abf8e49f455a47cb71d2d9fd149d7846d"
   integrity sha512-lFqvLgw4oAChA9+ifC2K7Ie+mE+XvHcZqwXsm45bpF7jbmqfgjS0gvQNfu2egi6u4hdg+xL+olNxwnyhayrikw==
@@ -1413,7 +1368,7 @@
     auto-bind "~4.0.0"
     tslib "~2.4.0"
 
-"@graphql-codegen/visitor-plugin-common@2.12.0", "@graphql-codegen/visitor-plugin-common@^2.9.1":
+"@graphql-codegen/visitor-plugin-common@2.12.0":
   version "2.12.0"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/visitor-plugin-common/-/visitor-plugin-common-2.12.0.tgz#49b055c5c2c5c0890f2226ce9e84bb73dfd83801"
   integrity sha512-ULhFgOY05U+dlPsXkPT2wSBaAZMtEuHPL5Q1u8xwBdHWHi/uT4L5zEcBx+If/f6UWrOw7ufjEM0L7XSupe1iCA==
@@ -1643,7 +1598,7 @@
   dependencies:
     tslib "~2.3.0"
 
-"@graphql-tools/utils@8.8.0", "@graphql-tools/utils@^8.6.13", "@graphql-tools/utils@^8.8.0":
+"@graphql-tools/utils@8.8.0", "@graphql-tools/utils@^8.8.0":
   version "8.8.0"
   resolved "https://registry.yarnpkg.com/@graphql-tools/utils/-/utils-8.8.0.tgz#8332ff80a1da9204ccf514750dd6f5c5cccf17dc"
   integrity sha512-KJrtx05uSM/cPYFdTnGAS1doL5bftJLAiFCDMZ8Vkifztz3BFn3gpFiy/o4wDtM8s39G46mxmt2Km/RmeltfGw==
@@ -6788,26 +6743,6 @@ gatsby-plugin-sitemap@5.19.0:
     minimatch "^3.1.2"
     sitemap "^7.0.0"
 
-gatsby-plugin-typegen@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-typegen/-/gatsby-plugin-typegen-3.0.0.tgz#8e15c07c34e9166f47693de8e69f7800098ecbce"
-  integrity sha512-pMHVb7uVblttH9tq/uJyMRByzZIUUxdb82Z8cxmc5X5JZ1xEWde4wZhy2jr9FgXs16IuJQch5AHZ6RxCAL4qbA==
-  dependencies:
-    "@graphql-codegen/add" "^3.1.1"
-    "@graphql-codegen/core" "^2.5.1"
-    "@graphql-codegen/flow" "^2.2.13"
-    "@graphql-codegen/flow-operations" "^2.2.13"
-    "@graphql-codegen/flow-resolvers" "^2.2.14"
-    "@graphql-codegen/plugin-helpers" "^2.4.2"
-    "@graphql-codegen/typescript" "^2.5.1"
-    "@graphql-codegen/typescript-operations" "^2.4.2"
-    "@graphql-codegen/typescript-resolvers" "^2.6.6"
-    "@graphql-codegen/visitor-plugin-common" "^2.9.1"
-    "@graphql-tools/utils" "^8.6.13"
-    lodash "^4.17.21"
-    slugify "^1.6.5"
-    xstate "^4.32.1"
-
 gatsby-plugin-typescript@^4.19.0:
   version "4.19.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-4.19.0.tgz#f7e84944b3a273ae8154c41637b61feb8fb3f777"
@@ -11884,7 +11819,7 @@ slice-ansi@^4.0.0:
     astral-regex "^2.0.0"
     is-fullwidth-code-point "^3.0.0"
 
-slugify@^1.6.1, slugify@^1.6.5:
+slugify@^1.6.1:
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.6.5.tgz#c8f5c072bf2135b80703589b39a3d41451fbe8c8"
   integrity sha512-8mo9bslnBO3tr5PEVFzMPIWwWnipGS0xVbYf65zxDqfNwmzYn1LpiKNrR6DlClusuvo+hDHd1zKpmfAe83NQSQ==
@@ -13558,7 +13493,7 @@ xss@^1.0.6:
     commander "^2.20.3"
     cssfilter "0.0.10"
 
-xstate@^4.26.0, xstate@^4.26.1, xstate@^4.32.1:
+xstate@^4.26.0, xstate@^4.26.1:
   version "4.32.1"
   resolved "https://registry.yarnpkg.com/xstate/-/xstate-4.32.1.tgz#1a09c808a66072938861a3b4acc5b38460244b70"
   integrity sha512-QYUd+3GkXZ8i6qdixnOn28bL3EvA++LONYL/EMWwKlFSh/hiLndJ8YTnz77FDs+JUXcwU7NZJg7qoezoRHc4GQ==

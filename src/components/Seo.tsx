@@ -8,16 +8,16 @@ type Props = {
   title?: string;
   titleTemplate?: string;
   description?: string;
-  image?: Pick<GatsbyTypes.ImageSharp, 'gatsbyImageData'>;
+  image?: Queries.Maybe<Queries.ImageSharp>;
 };
 
 const SEO: React.FC<Props> = ({ title, titleTemplate, description, image }) => {
   const { pathname } = useLocation();
-  const { site } = useStaticQuery<GatsbyTypes.SEOQuery>(query);
+  const { site } = useStaticQuery<Queries.SEOQuery>(query);
   const pageUrl = `${site?.siteMetadata?.siteUrl}${pathname}`;
 
   const imageUrl = image
-    ? `${site?.siteMetadata?.siteUrl}${getSrc(image)}`
+    ? `${site?.siteMetadata?.siteUrl}${getSrc(image.gatsbyImageData)}`
     : undefined;
 
   return (

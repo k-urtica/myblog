@@ -12,6 +12,10 @@ const config: GatsbyConfig = {
     // gitHubUrl: `https://github.com/k-urtica`,
   },
 
+  graphqlTypegen: {
+    typesOutputPath: `types/__generated__/gatsby-types.d.ts`,
+  },
+
   plugins: [
     {
       resolve: `gatsby-plugin-typescript`,
@@ -97,9 +101,9 @@ const config: GatsbyConfig = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-typegen`,
-    },
+    // {
+    //   resolve: `gatsby-plugin-typegen`,
+    // },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-image`,

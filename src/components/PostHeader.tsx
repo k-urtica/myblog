@@ -2,7 +2,7 @@ import { formatDate, getPathByCategory } from '../utils/helpers';
 import AppLink from './AppLink';
 
 type Props = {
-  frontmatter: GatsbyTypes.MarkdownRemarkFrontmatter;
+  frontmatter: Queries.MarkdownRemarkFrontmatter;
 };
 
 const PostHeader = ({ frontmatter }: Props) => {
@@ -18,14 +18,14 @@ const PostHeader = ({ frontmatter }: Props) => {
         <div className="text-sm font-bold">
           <div>Posted</div>
           <div className="mt-1 text-gray-200">
-            <time dateTime={date}>{formatDate(date as string)}</time>
+            <time dateTime={date as string}>{formatDate(date as string)}</time>
           </div>
         </div>
         {updatedAt !== 'Invalid date' && (
           <div className="text-sm font-bold">
             <div>Updated</div>
             <div className="mt-1 text-gray-200">
-              <time dateTime={updatedAt}>
+              <time dateTime={updatedAt as string}>
                 {formatDate(updatedAt as string)}
               </time>
             </div>
@@ -34,7 +34,9 @@ const PostHeader = ({ frontmatter }: Props) => {
         <div className="text-sm font-bold">
           <div>Category</div>
           <div className="mt-1 text-gray-200">
-            <AppLink to={getPathByCategory(category)}>{category}</AppLink>
+            <AppLink to={getPathByCategory(category as string)}>
+              {category}
+            </AppLink>
           </div>
         </div>
       </div>

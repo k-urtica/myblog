@@ -9,15 +9,15 @@ import Layout from '../layouts/Layout';
 import '../styles/markdown.scss';
 
 type Props = {
-  data: GatsbyTypes.BlogPostQuery;
+  data: Queries.BlogPostQuery;
   pageContext: {
-    next: GatsbyTypes.Maybe<GatsbyTypes.MarkdownRemark>;
-    previous: GatsbyTypes.Maybe<GatsbyTypes.MarkdownRemark>;
+    next: Queries.MarkdownRemark;
+    previous: Queries.MarkdownRemark;
   };
 };
 
 const PostTemplate = ({ data, pageContext }: Props) => {
-  const post = data.markdownRemark as GatsbyTypes.MarkdownRemark;
+  const post = data.markdownRemark as Queries.MarkdownRemark;
   const { frontmatter } = post;
   const { next, previous } = pageContext;
   const shareUrl = `${data?.site?.siteMetadata?.siteUrl}${post?.fields?.postPath}`;
@@ -25,8 +25,8 @@ const PostTemplate = ({ data, pageContext }: Props) => {
   return (
     <>
       <SEO
-        title={frontmatter?.title}
-        description={frontmatter?.summary}
+        title={frontmatter?.title as string}
+        description={frontmatter?.summary as string}
         image={frontmatter?.cover?.childImageSharp}
       />
 

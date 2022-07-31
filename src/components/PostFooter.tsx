@@ -3,8 +3,8 @@ import ShareLinks from './ShareLinks';
 
 type Props = {
   share: string;
-  next?: GatsbyTypes.Maybe<GatsbyTypes.MarkdownRemark>;
-  prev?: GatsbyTypes.Maybe<GatsbyTypes.MarkdownRemark>;
+  next?: Queries.Maybe<Queries.MarkdownRemark>;
+  prev?: Queries.Maybe<Queries.MarkdownRemark>;
 };
 
 const PostFooter = ({ share, next, prev }: Props) => (

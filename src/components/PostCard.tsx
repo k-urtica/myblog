@@ -3,7 +3,7 @@ import { formatDate } from '../utils/helpers';
 import AppLink from './AppLink';
 
 type Props = {
-  item: GatsbyTypes.MarkdownRemarkFrontmatter;
+  item: Queries.MarkdownRemarkFrontmatter;
   path: string;
 };
 
@@ -21,7 +21,10 @@ const PostCard = ({ item, path }: Props) => {
 
         <div className="flex flex-grow flex-col  rounded-lg px-5 py-4">
           <div className="mb-1">
-            <time dateTime={date} className="text-sm font-bold text-violet-400">
+            <time
+              dateTime={date as string}
+              className="text-sm font-bold text-violet-400"
+            >
               {formatDate(date as string)}
             </time>
           </div>
