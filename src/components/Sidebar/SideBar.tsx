@@ -3,7 +3,7 @@ import Contact from './Contact';
 
 const Sidebar = () => {
   return (
-    <aside>
+    <aside className="mx-auto max-w-xs">
       <div className="rounded-xl bg-gradient-to-tl from-gray-700/60 to-gray-800/40 p-5">
         <div className="text-center">
           <div className="avatar">

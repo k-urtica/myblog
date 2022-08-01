@@ -1,8 +1,8 @@
 import AppLink from './AppLink';
 
 const HeaderBar = () => (
-  <header className="container navbar mx-auto">
-    <div className="flex-1">
+  <header className="container navbar mx-auto max-w-screen-xl">
+    <div className="">
       <AppLink to="/" className="text-lg">
         <h1 className="font-bold text-gray-100">K note.dev</h1>
       </AppLink>

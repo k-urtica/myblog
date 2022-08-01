@@ -37,8 +37,8 @@ const PostTemplate = ({ data, pageContext }: Props) => {
           </div>
 
           <div className="grid grid-cols-12 gap-6">
-            <div className="col-span-12 md:col-span-8 xl:col-span-9">
-              <div className="md:px-6 xl:px-9">
+            <div className="col-span-12 md:col-span-8">
+              <section className="pb-10">
                 {frontmatter?.cover?.childImageSharp && (
                   <GatsbyImage
                     image={frontmatter.cover.childImageSharp.gatsbyImageData}
@@ -46,20 +46,18 @@ const PostTemplate = ({ data, pageContext }: Props) => {
                     className="rounded-xl"
                   />
                 )}
-                <section className="pt-6">
-                  <div
-                    className="markdown-body"
-                    dangerouslySetInnerHTML={{ __html: post.html as string }}
-                  />
-                </section>
 
+                <div
+                  className="markdown-body pt-6"
+                  dangerouslySetInnerHTML={{ __html: post.html as string }}
+                />
                 <div className="mt-14 border-t border-gray-400/50 py-6">
                   <PostFooter share={shareUrl} next={next} prev={previous} />
                 </div>
-              </div>
+              </section>
             </div>
 
-            <div className="col-span-12 md:col-span-4 xl:col-span-3">
+            <div className="col-span-12 md:col-span-4">
               <Sidebar />
             </div>
           </div>

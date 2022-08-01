@@ -20,18 +20,18 @@ const TagTemplate = ({ data, pageContext }: Props) => {
 
       <Layout>
         <div className="grid gap-6 md:grid-cols-12">
-          <div className="col-span-12 md:col-span-8 xl:col-span-9">
-            <div className="md:px-6 xl:px-9">
+          <div className="col-span-12 md:col-span-8">
+            <section className="pb10">
               <div className="mb-10 text-center">
                 <div className="mb-1 font-bold text-gray-300">Tag</div>
                 <h2 className="text-2xl font-bold text-gray-100">{tagName}</h2>
               </div>
 
               <PostCardList posts={data} />
-            </div>
+            </section>
           </div>
 
-          <div className="col-span-12 md:col-span-4 xl:col-span-3">
+          <div className="col-span-12 md:col-span-4">
             <Sidebar />
           </div>
         </div>
