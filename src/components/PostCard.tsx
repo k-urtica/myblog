@@ -12,7 +12,7 @@ const PostCard = ({ item, path }: Props) => {
 
   return (
     <AppLink to={path}>
-      <article className="borde flex flex-col overflow-hidden rounded-xl bg-gradient-to-l from-gray-800/80 to-gray-800/20 hover:bg-gray-800 md:flex-row">
+      <article className="flex flex-col overflow-hidden rounded-xl bg-gradient-to-l from-gray-800/80 to-gray-800/20 hover:bg-gray-800 md:flex-row">
         <GatsbyImage
           image={cover?.childImageSharp?.gatsbyImageData}
           alt={title as string}

@@ -8,11 +8,7 @@ const Sidebar = () => {
         <div className="text-center">
           <div className="avatar">
             <div className="w-24 rounded-full ring ring-indigo-400/80 ring-offset-2">
-              <StaticImage
-                src="../../images/avatar.png"
-                alt="avatar"
-                className=""
-              />
+              <StaticImage src="../../images/avatar.png" alt="avatar" />
             </div>
           </div>
         </div>
@@ -21,12 +17,14 @@ const Sidebar = () => {
           <div className="text-center text-2xl font-bold text-emerald-300">
             <span className="border-b-2">K</span>
           </div>
-          <p className="mt-5 text-sm text-gray-300/90">
-            フロントエンド／バックエンドエンジニア。個人開発ではおもにVue.js、NuxtJSをメインに使っています。
-          </p>
+          <div className="mt-5 text-sm text-gray-300/90">
+            <p>
+              フロントエンド／バックエンドエンジニア。個人開発ではおもにVue.js、NuxtJSをメインに使っています。
+            </p>
+          </div>
         </div>
 
-        <Contact className="mt-4" />
+        <Contact className="mt-6" />
       </div>
     </aside>
   );
