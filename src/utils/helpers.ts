@@ -22,7 +22,9 @@ export const formatDate = (
  * @param category category string
  * @returnsc category page path
  */
-export const getPathByCategory = (category: string | undefined): string => {
+export const getPathByCategory = (
+  category: string | undefined | null
+): string => {
   if (!category) return `/category/`;
   return `/category/${kebabCase(category)}/`;
 };
@@ -32,7 +34,7 @@ export const getPathByCategory = (category: string | undefined): string => {
  * @param tag tag string
  * @returnsc tag page path
  */
-export const getPathByTag = (tag: string | undefined): string => {
+export const getPathByTag = (tag: string | undefined | null): string => {
   if (!tag) return `/tag/`;
   return `/tag/${kebabCase(tag)}/`;
 };
