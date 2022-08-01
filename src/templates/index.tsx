@@ -20,22 +20,24 @@ const IndexPage = ({ data, pageContext }: Props) => {
       <SEO titleTemplate={data.site?.siteMetadata?.title as string} />
 
       <Layout>
-        <div className="grid gap-6 md:grid-cols-12">
-          <div className="col-span-12 md:col-span-8 xl:col-span-9">
-            <div className="md:px-6 xl:px-9">
-              <PostCardList posts={data} />
+        <div className="pt-10">
+          <div className="grid gap-6 md:grid-cols-12">
+            <div className="col-span-12 md:col-span-8 xl:col-span-9">
+              <div className="md:px-6 xl:px-9">
+                <PostCardList posts={data} />
 
-              <div className="mt-4">
-                <PageNation
-                  nextPage={pageContext.nextPagePath}
-                  prevPage={pageContext.previousPagePath}
-                />
+                <div className="mt-4">
+                  <PageNation
+                    nextPage={pageContext.nextPagePath}
+                    prevPage={pageContext.previousPagePath}
+                  />
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="col-span-12 md:col-span-4 xl:col-span-3">
-            <Sidebar />
+            <div className="col-span-12 md:col-span-4 xl:col-span-3">
+              <Sidebar />
+            </div>
           </div>
         </div>
       </Layout>

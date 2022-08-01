@@ -6,7 +6,7 @@
   h4,
   h5,
   h6 {
-    color: #e5e7eb;
+    color: #e2e8f0;
     font-weight: bold;
     line-height: 1.25;
     padding-bottom: 0.3rem;
@@ -87,7 +87,7 @@
   pre,
   table,
   ul {
-    color: rgba(243, 244, 246, 0.78);
+    color: rgba(243, 244, 246, 0.8);
     margin-top: 1.5rem;
     margin-bottom: 1.8rem;
     line-height: 1.75rem;
@@ -194,12 +194,13 @@
     overflow: hidden;
     border-radius: 6px;
     border: thin solid rgba(230, 230, 230, 0.2);
+    background: #1e293b;
 
     .embed-card-link {
       display: flex;
       align-items: center;
       height: 120px;
-      background: #1f2937;
+
       transition: 0.25s;
 
       .embed-card-main {
@@ -208,7 +209,7 @@
 
         .embed-card-title {
           color: #f3f4f6;
-          font-size: 0.9rem;
+          font-size: 0.95rem;
           font-weight: bold;
           display: -webkit-box;
           -webkit-box-orient: vertical;
@@ -216,8 +217,8 @@
           overflow: hidden;
         }
         .embed-card-description {
-          color: #d1d5db;
-          font-size: 0.78rem;
+          color: #cbd5e1;
+          font-size: 0.8rem;
           display: -webkit-box;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 1;
@@ -230,12 +231,13 @@
           margin-top: 0.5rem;
 
           .embed-card-favicon {
+            width: 0.95rem;
             height: 0.95rem;
             margin-right: 0.5rem;
           }
           .embed-card-url {
-            color: #9ca3af;
-            font-size: 0.7rem;
+            color: #cbd5e1;
+            font-size: 0.78rem;
             display: -webkit-box;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 1;
@@ -259,7 +261,7 @@
       }
 
       &:hover {
-        background-color: #374151;
+        background-color: #334155;
       }
     }
   }

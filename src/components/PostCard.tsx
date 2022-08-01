@@ -19,7 +19,7 @@ const PostCard = ({ item, path }: Props) => {
           className="w-full flex-shrink-0 object-cover md:w-52 lg:w-64"
         />
 
-        <div className="flex flex-grow flex-col  rounded-lg px-5 py-4">
+        <div className="flex flex-grow flex-col rounded-lg px-5 py-4">
           <div className="mb-1">
             <time
               dateTime={date as string}
@@ -31,7 +31,7 @@ const PostCard = ({ item, path }: Props) => {
           <h2 className="text-lg font-bold text-gray-100 md:text-xl">
             {title}
           </h2>
-          <p className="mt-4 text-sm text-gray-400 line-clamp-3 md:line-clamp-2">
+          <p className="mt-4 text-sm text-gray-300/80 line-clamp-3 md:line-clamp-2">
             {summary}
           </p>
         </div>

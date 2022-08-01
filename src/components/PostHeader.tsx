@@ -34,7 +34,10 @@ const PostHeader = ({ frontmatter }: Props) => {
         <div className="text-sm font-bold">
           <div>Category</div>
           <div className="mt-1 text-gray-200">
-            <AppLink to={getPathByCategory(category as string)}>
+            <AppLink
+              to={getPathByCategory(category as string)}
+              className="underline-offset-2 hover:underline"
+            >
               {category}
             </AppLink>
           </div>
