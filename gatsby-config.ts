@@ -101,9 +101,6 @@ const config: GatsbyConfig = {
         ],
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-typegen`,
-    // },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-image`,
