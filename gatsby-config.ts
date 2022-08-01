@@ -2,7 +2,7 @@ import type { GatsbyConfig } from 'gatsby';
 
 const SITE_TITLE = `K note.dev`;
 const SITE_URL = `https://knote.dev`;
-const DESCRIPTION = `ソフトウェアエンジニア「K」の個人ブログ。個人開発で使うプログラミング等の技術を中心にアウトプットしていきます。`;
+const DESCRIPTION = `K's notes. Output programming, personal projects, and everyday things.`;
 
 const config: GatsbyConfig = {
   siteMetadata: {
