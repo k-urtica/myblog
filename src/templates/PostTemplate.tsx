@@ -32,7 +32,7 @@ const PostTemplate = ({ data, pageContext }: Props) => {
 
       <Layout>
         <article>
-          <div className="pb-8">
+          <div className="pb-14">
             <PostHeader frontmatter={frontmatter!} />
           </div>
 

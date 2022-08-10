@@ -19,7 +19,7 @@ const TagTemplate = ({ data, pageContext }: Props) => {
       <SEO title={`Tag: ${tagName}`} />
 
       <Layout>
-        <div className="grid gap-6 md:grid-cols-12">
+        <div className="grid gap-6 pt-10 md:grid-cols-12">
           <div className="col-span-12 md:col-span-8">
             <section className="pb10">
               <div className="mb-10 text-center">
