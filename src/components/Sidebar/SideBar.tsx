@@ -1,4 +1,5 @@
 import { StaticImage } from 'gatsby-plugin-image';
+import AppLink from '../AppLink';
 import Contact from './Contact';
 
 const Sidebar = () => {
@@ -21,10 +22,18 @@ const Sidebar = () => {
             <p>
               フロントエンド／バックエンドエンジニア。個人開発ではおもにVue.js、NuxtJSをメインに使っています。
             </p>
+
+            <p className="mt-3">プロフィール兼ポートフォリオサイト</p>
+            <AppLink
+              to="https://k-urtica.github.io/"
+              className="mt-1 inline-block font-bold text-sky-200/90 before:content-['👉_']"
+            >
+              K - Web Developer
+            </AppLink>
           </div>
         </div>
 
-        <Contact className="mt-6" />
+        <Contact className="mt-7" />
       </div>
     </aside>
   );
