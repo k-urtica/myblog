@@ -42,7 +42,7 @@ const PostTemplate = ({ data, pageContext }: Props) => {
                 {frontmatter?.cover?.childImageSharp && (
                   <GatsbyImage
                     image={frontmatter.cover.childImageSharp.gatsbyImageData}
-                    alt={frontmatter?.title as string}
+                    alt={frontmatter.title as string}
                     className="rounded-xl"
                   />
                 )}

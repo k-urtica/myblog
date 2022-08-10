@@ -1,4 +1,4 @@
-import { formatDate, getPathByCategory } from '../utils/helpers';
+import { formatDate, getPathByCategory, getPathByTag } from '../utils/helpers';
 import AppLink from './AppLink';
 
 type Props = {
@@ -6,7 +6,7 @@ type Props = {
 };
 
 const PostHeader = ({ frontmatter }: Props) => {
-  const { title, date, updatedAt, category } = frontmatter;
+  const { title, date, updatedAt, category, tags } = frontmatter;
 
   return (
     <>
@@ -14,16 +14,16 @@ const PostHeader = ({ frontmatter }: Props) => {
         {title}
       </h2>
 
-      <div className="mt-6 flex justify-center gap-9">
+      <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 sm:gap-9">
         <div className="text-sm font-bold">
-          <div>Posted</div>
+          <div className="text-center">Posted</div>
           <div className="mt-1 text-gray-200">
             <time dateTime={date as string}>{formatDate(date as string)}</time>
           </div>
         </div>
         {updatedAt !== 'Invalid date' && (
           <div className="text-sm font-bold">
-            <div>Updated</div>
+            <div className="text-center">Updated</div>
             <div className="mt-1 text-gray-200">
               <time dateTime={updatedAt as string}>
                 {formatDate(updatedAt as string)}
@@ -32,7 +32,7 @@ const PostHeader = ({ frontmatter }: Props) => {
           </div>
         )}
         <div className="text-sm font-bold">
-          <div>Category</div>
+          <div className="text-center">Category</div>
           <div className="mt-1 text-gray-200">
             <AppLink
               to={getPathByCategory(category)}
@@ -40,6 +40,23 @@ const PostHeader = ({ frontmatter }: Props) => {
             >
               {category}
             </AppLink>
+          </div>
+        </div>
+        <div className="text-sm font-bold">
+          <div className="text-center">Tag</div>
+          <div className="mt-1 text-gray-200">
+            <ul className="flex gap-3">
+              {tags?.map((tag) => (
+                <li key={tag}>
+                  <AppLink
+                    to={getPathByTag(tag)}
+                    className="underline-offset-2 hover:underline"
+                  >
+                    {tag}
+                  </AppLink>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
