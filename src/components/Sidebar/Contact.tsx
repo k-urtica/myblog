@@ -22,7 +22,7 @@ const Contact = ({ className }: Props) => {
 
   return (
     <div className={className}>
-      <ul className="flex justify-center gap-4">
+      <ul className="flex justify-center gap-5">
         {links.map((link) => (
           <li
             key={link.name}
