@@ -1,4 +1,4 @@
-import { Script } from 'gatsby';
+// import { Script } from 'gatsby';
 import Footer from '../components/Footer';
 import HeaderBar from '../components/HeaderBar';
 
@@ -8,10 +8,10 @@ type Props = {
 
 const Layout = ({ children }: Props) => (
   <>
-    <Script
+    {/* <Script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-    />
+    /> */}
 
     <div className="font-body antialiased">
       <HeaderBar />
