@@ -1,23 +1,26 @@
+import { useLocation } from '@reach/router';
 import AppLink from './AppLink';
 
-const HeaderBar = () => (
-  <header className="container navbar mx-auto max-w-screen-xl">
-    <div className="">
-      <AppLink to="/" className="text-lg">
-        <h1 className="font-bold text-gray-100">K note.dev</h1>
-      </AppLink>
-    </div>
+const HeaderBar = () => {
+  const location = useLocation();
 
-    {/* <div className="flex-none">
-      <ul className="flex">
-        <li>
-          <AppLink to="/about/" className="btn btn-ghost text-base normal-case">
-            Profil
+  return (
+    <header className="container navbar mx-auto max-w-screen-xl justify-between">
+      <div className="">
+        <AppLink to="/" className="text-lg">
+          <h1 className="font-bold text-gray-100">K note.dev</h1>
+        </AppLink>
+      </div>
+
+      {location.pathname !== '/' && (
+        <div>
+          <AppLink to="/" className="btn btn-ghost text-base normal-case">
+            All Posts
           </AppLink>
-        </li>
-      </ul>
-    </div> */}
-  </header>
-);
+        </div>
+      )}
+    </header>
+  );
+};
 
 export default HeaderBar;
