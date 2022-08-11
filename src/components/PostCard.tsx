@@ -16,7 +16,7 @@ const PostCard = ({ item, path }: Props) => {
         <GatsbyImage
           image={cover?.childImageSharp?.gatsbyImageData}
           alt={title as string}
-          className="w-full flex-shrink-0 object-cover md:w-52 lg:w-64"
+          className="aspect-video w-full flex-shrink-0 object-cover md:w-52 lg:w-64"
         />
 
         <div className="flex flex-grow flex-col rounded-lg px-5 py-4">
