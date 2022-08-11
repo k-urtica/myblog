@@ -7,7 +7,7 @@ cover: cover.png
 coverCaption: ""
 summary: プログラミングやWeb制作に便利なツールをブラウザ上で簡単に利用できるWebサービスを作りました😆
 category: 個人開発
-tags: [個人開発, AWS, Nuxt.js, Vuetify]
+tags: [Web ToolBox, AWS, NuxtJS, Vuetify]
 ---
 
 ## はじめに

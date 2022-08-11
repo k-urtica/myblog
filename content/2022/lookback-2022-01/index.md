@@ -7,7 +7,7 @@ cover: cover.png
 coverCaption: ""
 summary: 2022年1月の振り返り。雑記や個人開発の状況などつらつらと。。
 category: 振り返り
-tags: ["雑記", "個人開発", "生活"]
+tags: ["個人開発", "Web ToolBox", "雑記"]
 ---
 
 2022年になってはやくもひと月が過ぎ、1月の振り返り。

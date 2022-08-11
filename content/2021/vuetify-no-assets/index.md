@@ -7,7 +7,7 @@ cover: cover.png
 coverCaption: ""
 summary: Vuetify（Nuxt Vuetify-module）でデフォルトで使用されるマテリアルデザインアイコンとRobotoフォントを使わない設定について。
 category: プログラミング
-tags: ["Vuetify", "Nuxt.js", "Vue.js"]
+tags: [Vuetify, NuxtJS, Vue.js]
 ---
 
 ## NuxtでVuetifyを使う

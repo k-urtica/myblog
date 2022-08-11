@@ -7,7 +7,7 @@ cover: cover.jpg
 coverCaption: ""
 summary: Nuxt.jsでURL末尾のスラッシュ（trailing slash）を強制的に付けて、アプリケーションで末尾スラッシュの有無を統一させる方法。
 category: プログラミング
-tags: [Nuxt.js]
+tags: [NuxtJS]
 ---
 
 ## トレイリングスラッシュ（trailing slash）とは？
