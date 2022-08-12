@@ -21,10 +21,7 @@ const PostCard = ({ item, path }: Props) => {
 
         <div className="flex flex-grow flex-col rounded-lg px-5 py-4">
           <div className="mb-1">
-            <time
-              dateTime={date as string}
-              className="text-sm font-bold text-violet-400"
-            >
+            <time dateTime={date as string} className="text-sm font-bold">
               {formatDate(date as string)}
             </time>
           </div>
