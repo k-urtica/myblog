@@ -18,18 +18,6 @@ export const formatDate = (
 };
 
 /**
- * Get page path from category
- * @param category category string
- * @returnsc category page path
- */
-export const getPathByCategory = (
-  category: string | undefined | null
-): string => {
-  if (!category) return `/category/`;
-  return `/category/${kebabCase(category)}/`;
-};
-
-/**
  * Get page path from tag
  * @param tag tag string
  * @returnsc tag page path

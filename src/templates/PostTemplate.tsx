@@ -79,7 +79,6 @@ export const pageQuery = graphql`
             gatsbyImageData(layout: FULL_WIDTH)
           }
         }
-        category
         date(formatString: "YYYY-MM-DDTHH:mm+09:00")
         updatedAt(formatString: "YYYY-MM-DDTHH:mm+09:00")
         tags

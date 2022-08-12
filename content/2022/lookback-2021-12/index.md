@@ -6,7 +6,6 @@ updatedAt: 2022-03-09T11:33:31
 cover: cover.png
 coverCaption: ""
 summary: 2021年12月の振り返り。雑記や個人開発の状況などつらつらと。。 新しく個人開発した日本踏破図🗾をリリースしました！
-category: 振り返り
 tags: ["個人開発", "Web ToolBox", "雑記"]
 ---
 

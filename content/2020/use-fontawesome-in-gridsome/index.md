@@ -6,7 +6,6 @@ updatedAt: ""
 cover: cover.png
 coverCaption: ""
 summary: Gridsomeを使ったサイトにWebアイコンフォント『Font Awesome』を導入して様々なアイコンを利用する方法について紹介します。
-category: プログラミング
 tags: [Gridsome, Font Awesome]
 ---
 

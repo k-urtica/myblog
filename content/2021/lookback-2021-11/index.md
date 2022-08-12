@@ -6,7 +6,6 @@ updatedAt: 2022-02-02T10:27:49
 cover: cover.png
 coverCaption: ""
 summary: 2021年11月の振り返り。雑記や個人開発の状況などつらつらと。。 先月は個人開発しているWeb ToolBoxの更新を頑張って、PVも過去最多となり順調でした。
-category: 振り返り
 tags: ["個人開発", "Web ToolBox", "雑記"]
 ---
 

@@ -6,7 +6,6 @@ updatedAt: ""
 cover: cover.jpg
 coverCaption: ""
 summary: だいぶ間が空いてしまったけど、4月～7月までの振り返り。
-category: 振り返り
 tags: ["個人開発", "Web ToolBox", "雑記"]
 ---
 

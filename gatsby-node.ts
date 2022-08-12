@@ -53,7 +53,6 @@ export const createPages: GatsbyNode['createPages'] = async ({
             }
             id
             frontmatter {
-              category
               tags
             }
           }
@@ -73,11 +72,6 @@ export const createPages: GatsbyNode['createPages'] = async ({
               postPath
             }
           }
-        }
-      }
-      categoryGroup: allMarkdownRemark(limit: 2000) {
-        group(field: frontmatter___category) {
-          fieldValue
         }
       }
       tagsGroup: allMarkdownRemark(limit: 2000) {
@@ -119,18 +113,6 @@ export const createPages: GatsbyNode['createPages'] = async ({
     itemsPerFirstPage: 12,
     pathPrefix: ({ pageNumber }) => (pageNumber === 0 ? `/` : `/page`),
     component: path.resolve(`./src/templates/index.tsx`),
-  });
-
-  /* Make Category pages */
-  const categories = results.data.categoryGroup.group;
-  categories.forEach((category) => {
-    createPage({
-      path: `/category/${kebabCase(category.fieldValue)}/`,
-      component: path.resolve(`./src/templates/CategoryTemplate.tsx`),
-      context: {
-        category: category.fieldValue,
-      },
-    });
   });
 
   /* Make Tag pages */

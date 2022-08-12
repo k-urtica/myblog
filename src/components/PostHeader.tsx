@@ -1,4 +1,4 @@
-import { formatDate, getPathByCategory, getPathByTag } from '../utils/helpers';
+import { formatDate, getPathByTag } from '../utils/helpers';
 import AppLink from './AppLink';
 
 type Props = {
@@ -6,7 +6,7 @@ type Props = {
 };
 
 const PostHeader = ({ frontmatter }: Props) => {
-  const { title, date, updatedAt, category, tags } = frontmatter;
+  const { title, date, updatedAt, tags } = frontmatter;
 
   return (
     <>
@@ -14,7 +14,7 @@ const PostHeader = ({ frontmatter }: Props) => {
         {title}
       </h2>
 
-      <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 sm:gap-9">
+      <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 sm:gap-10">
         <div className="text-sm font-bold">
           <div className="text-center">Posted</div>
           <div className="mt-1 text-gray-200">
@@ -32,18 +32,7 @@ const PostHeader = ({ frontmatter }: Props) => {
           </div>
         )}
         <div className="text-sm font-bold">
-          <div className="text-center">Category</div>
-          <div className="mt-1 text-gray-200">
-            <AppLink
-              to={getPathByCategory(category)}
-              className="underline-offset-2 hover:underline"
-            >
-              {category}
-            </AppLink>
-          </div>
-        </div>
-        <div className="text-sm font-bold">
-          <div className="text-center">Tag</div>
+          <div className="text-center">Tags</div>
           <div className="mt-1 text-gray-200">
             <ul className="flex gap-3">
               {tags?.map((tag) => (

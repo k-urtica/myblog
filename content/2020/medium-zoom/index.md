@@ -6,7 +6,6 @@ updatedAt: 2020-09-29T22:38:07
 cover: cover.jpg
 coverCaption: ""
 summary: Gridsomeで構築したサイトで画像のMediumのようなライトボックス(画像ズーム)を実装する方法について紹介します。
-category: プログラミング
 tags: [Gridsome, Vue.js, JSライブラリ]
 ---
 

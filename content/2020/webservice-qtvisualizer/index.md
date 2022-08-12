@@ -6,7 +6,6 @@ updatedAt: ""
 cover: cover.png
 coverCaption: "QT Visualizer｜【Qiita技術記事のランキング】"
 summary: Qiita APIを利用したQiitaの技術記事を分析し人気の記事／ユーザ／技術書籍を発見することができる、個人開発したWebサービス「QT Visualizer｜【Qiita技術記事のランキング】」の紹介。
-category: プログラミング
 tags: [個人開発, Vue.js, Vuetify, Webサービス]
 ---
 

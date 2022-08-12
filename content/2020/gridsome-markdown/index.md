@@ -6,7 +6,6 @@ updatedAt: ""
 cover: cover.jpg
 coverCaption: ""
 summary: Vue製静的サイトジェネレータGridsomeでマークダウンファイルをJavaScriptで扱う方法。
-category: プログラミング
 tags: [Gridsome, マークダウン]
 ---
 

@@ -6,7 +6,6 @@ updatedAt: ""
 cover: cover.jpg
 coverCaption: "Photo by Ferenc Almasi on Unsplash"
 summary: VSCodeのエディタ部分が元となった、ブラウザ上で動作するMonaco Editor（モナコエディター）をNuxt.jsで使う方法。
-category: プログラミング
 tags: [NuxtJS, Monaco Editor, Vue.js]
 ---
 

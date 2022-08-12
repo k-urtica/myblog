@@ -1,10 +1,7 @@
 import PostCard from './PostCard';
 
 type Props = {
-  posts:
-    | Queries.AllPostsQuery
-    | Queries.PostByCategoryQuery
-    | Queries.PostByTagQuery;
+  posts: Queries.AllPostsQuery | Queries.PostByTagQuery;
 };
 
 const PostList = ({ posts }: Props) => {

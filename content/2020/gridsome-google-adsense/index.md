@@ -6,7 +6,6 @@ updatedAt: 2021-03-13T13:15:10
 cover: cover.png
 coverCaption: ""
 summary: Gridsomeで構築したサイトにGoogle Adsense（アドセンス）を導入してAdsense広告を貼る方法について紹介します。
-category: プログラミング
 tags: [Gridsome, Adsense]
 ---
 

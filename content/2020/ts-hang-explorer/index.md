@@ -6,7 +6,6 @@ updatedAt: ""
 cover: cover.jpg
 coverCaption: "Photo by Viktor Talashuk on Unsplash"
 summary: TypeScriptを導入しているプロジェクトで大量の.tsファイルが存在するフォルダを開いたときにWindowsエクスプローラーがフリーズするのを防ぐ方法。
-category: その他
 tags: ["TypeScript", "Windows", "Explorer"]
 ---
 

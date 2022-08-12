@@ -6,7 +6,6 @@ updatedAt: ""
 cover: cover.jpg
 coverCaption: ""
 summary: Gridsomeを使ったサイトにVueの状態管理ライブラリ『Vuex』を導入する方法について紹介します。
-category: プログラミング
 tags: [Gridsome, Vuex]
 ---
 

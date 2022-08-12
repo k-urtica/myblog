@@ -58,7 +58,6 @@ export const query = graphql`
             title
             date(formatString: "YYYY-MM-DDTHH:mm+09:00")
             summary
-            category
             tags
             cover {
               childImageSharp {

@@ -6,7 +6,6 @@ updatedAt: ""
 cover: cover.png
 coverCaption: ""
 summary: 2022年3月と2月の振り返り。雑記や個人開発の状況などつらつらと。。
-category: 振り返り
 tags: ["個人開発", "Web ToolBox", "雑記"]
 ---
 

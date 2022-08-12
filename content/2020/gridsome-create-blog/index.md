@@ -6,7 +6,6 @@ updatedAt: ""
 cover: cover.jpg
 coverCaption: ""
 summary: Vue.js製静的サイトジェネレータ「Gridsome」を使って、マークダウンファイルでブログ記事を管理するマークダウンブログ（本ブログ）を作った話。
-category: プログラミング
 tags: [ブログ構築, Gridsome]
 ---
 

@@ -6,7 +6,6 @@ updatedAt: ""
 cover: cover.jpg
 coverCaption: "Photo by Shahadat Rahman on Unsplash"
 summary: PrettierをESLintとして実行することができるプラグインを使ったESLint・Prettier連携方法が公式で非推奨になってた話。
-category: プログラミング
 tags: [ESLint, Prettier, VSCode]
 ---
 

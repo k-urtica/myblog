@@ -6,7 +6,6 @@ updatedAt: ""
 cover: cover.jpg
 coverCaption: ""
 summary: Gridsomeを使ったサイトにCSSメタ言語のSassを導入してSASS・SCSS記法を使えるようにする方法について紹介します。
-category: プログラミング
 tags: [Gridsome, Sass]
 ---
 

@@ -6,7 +6,6 @@ updatedAt: ""
 cover: cover.png
 coverCaption: ""
 summary: Vue.js製静的サイトジェネレーターのGridsomeで構築していたブログをGatsbyでゼロから構築しなおしました！
-category: プログラミング
 tags: ["Gatsby", "React", "ブログ構築"]
 ---
 

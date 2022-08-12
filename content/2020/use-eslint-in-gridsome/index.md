@@ -6,7 +6,6 @@ updatedAt: ""
 cover: cover.jpg
 coverCaption: ""
 summary: Gridsomeを使ったサイトにESLintとコードフォーマッターのPrettierを導入する方法について紹介します。
-category: プログラミング
 tags: [Gridsome, ESLint, Prettier]
 ---
 

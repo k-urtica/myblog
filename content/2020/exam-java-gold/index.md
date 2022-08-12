@@ -6,7 +6,6 @@ updatedAt: 2020-12-26T23:54:04
 cover: cover.jpg
 coverCaption: "Photo by Green Chameleon on Unsplash"
 summary: Oracle認定資格Java Gold（Java SE 8 Programmer II (1Z0-809-JPN) ）資格試験合格記です。
-category: 資格
 tags: ["資格", "Java Gold", "Java"]
 ---
 

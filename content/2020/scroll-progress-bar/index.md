@@ -6,7 +6,6 @@ updatedAt: ""
 cover: cover.jpg
 coverCaption: "Photo by Kenny Luo on Unsplash"
 summary: 画面をスクロールした量に応じてプログレスバーが更新されていくVueライブラリ「vue-read-progress」をGridsomeで構築した本ブログで使ってみた。
-category: プログラミング
 tags: [Vueライブラリ]
 ---
 

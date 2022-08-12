@@ -6,7 +6,6 @@ updatedAt: 2020-04-19T12:54:19
 cover: cover.jpg
 coverCaption: ""
 summary: Gridsomeを使ったサイトにPWA（ Progressive web apps）を導入する方法について紹介します。
-category: プログラミング
 tags: [Gridsome, PWA]
 ---
 
