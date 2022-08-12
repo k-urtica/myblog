@@ -7,11 +7,12 @@ const Sidebar = () => {
     <aside className="mx-auto max-w-xs">
       <div className="rounded-xl bg-gradient-to-tl from-gray-700/60 to-gray-800/40 p-5">
         <div className="text-center">
-          <div className="avatar">
-            <div className="w-24 rounded-full ring ring-indigo-400/80 ring-offset-2">
-              <StaticImage src="../../images/avatar.png" alt="avatar" />
-            </div>
-          </div>
+          <StaticImage
+            src="../../images/avatar.png"
+            alt="avatar"
+            width={110}
+            className="transform rounded-full ring-4 ring-indigo-600/80 ring-offset-2"
+          />
         </div>
 
         <div className="mt-4">

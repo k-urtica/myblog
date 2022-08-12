@@ -26,7 +26,7 @@ const Contact = ({ className }: Props) => {
         {links.map((link) => (
           <li
             key={link.name}
-            className="ontline-amber-400 rounded-full outline outline-2 outline-offset-2 outline-indigo-500/80"
+            className="rounded-full p-0.5 ring-2 ring-indigo-600/80"
           >
             <AppLink to={link.url}>
               <Icon path={link.icon} size={1} className="text-gray-300" />
