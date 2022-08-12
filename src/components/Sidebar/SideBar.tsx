@@ -1,6 +1,7 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import AppLink from '../AppLink';
 import Contact from './Contact';
+import Products from './Products';
 
 const Sidebar = () => {
   return (
@@ -36,6 +37,8 @@ const Sidebar = () => {
 
         <Contact className="mt-7" />
       </div>
+
+      <Products className="mt-5" />
     </aside>
   );
 };
