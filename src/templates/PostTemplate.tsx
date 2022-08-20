@@ -36,8 +36,8 @@ const PostTemplate = ({ data, pageContext }: Props) => {
             <PostHeader frontmatter={frontmatter!} />
           </div>
 
-          <div className="grid grid-cols-12 gap-6">
-            <div className="col-span-12 md:col-span-8">
+          <div className="lg:flex lg:gap-11">
+            <div className="lg:flex-1">
               <section className="pb-10">
                 {frontmatter?.cover?.childImageSharp && (
                   <GatsbyImage
@@ -57,7 +57,7 @@ const PostTemplate = ({ data, pageContext }: Props) => {
               </section>
             </div>
 
-            <div className="col-span-12 md:col-span-4">
+            <div className="mx-auto w-80">
               <Sidebar />
             </div>
           </div>

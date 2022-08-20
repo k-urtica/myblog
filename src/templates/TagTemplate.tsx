@@ -19,8 +19,8 @@ const TagTemplate = ({ data, pageContext }: Props) => {
       <SEO title={`Tag: ${tagName}`} />
 
       <Layout>
-        <div className="grid gap-6 pt-10 md:grid-cols-12">
-          <div className="col-span-12 md:col-span-8">
+        <div className="lg:flex lg:gap-11">
+          <div className="lg:flex-1">
             <section className="pb10">
               <div className="mb-10 text-center">
                 <div className="mb-1 font-bold text-gray-300">Tag</div>
@@ -31,7 +31,7 @@ const TagTemplate = ({ data, pageContext }: Props) => {
             </section>
           </div>
 
-          <div className="col-span-12 md:col-span-4">
+          <div className="mx-auto w-80">
             <Sidebar />
           </div>
         </div>

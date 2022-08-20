@@ -21,8 +21,8 @@ const IndexPage = ({ data, pageContext }: Props) => {
 
       <Layout>
         <div className="pt-10">
-          <div className="grid gap-6 md:grid-cols-12">
-            <div className="col-span-12 md:col-span-8">
+          <div className="lg:flex lg:gap-11">
+            <div className="lg:flex-1">
               <div className="pb-8">
                 <PostCardList posts={data} />
 
@@ -35,7 +35,7 @@ const IndexPage = ({ data, pageContext }: Props) => {
               </div>
             </div>
 
-            <div className="col-span-12 md:col-span-4">
+            <div className="mx-auto w-80">
               <Sidebar />
             </div>
           </div>
