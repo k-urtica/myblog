@@ -13,7 +13,8 @@ const Author = ({ className }: Props) => {
           src="../../images/avatar.png"
           alt="avatar"
           width={110}
-          className="transform rounded-full ring-4 ring-indigo-600/80 ring-offset-2"
+          quality={100}
+          className="transform rounded-full ring-4 ring-indigo-400 ring-offset-2"
         />
       </div>
 
