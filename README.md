@@ -7,10 +7,6 @@
 
 My personal blog made with Gatsby💚
 
-## ⭐️ URL
-
-[https://knote.dev/](https://knote.dev/)
-
 ## 📄 License
 
 This project is [MIT](https://opensource.org/licenses/MIT) licensed.<br />
@@ -22,3 +18,7 @@ Copyright © 2021 [K](https://github.com/k-urtica/myblog).
 
 - Twitter: [@k_urtica](https://twitter.com/k_urtica)
 - Github: [@k-urtica](https://github.com/k-urtica)
+
+---
+
+**This project is archived.**
